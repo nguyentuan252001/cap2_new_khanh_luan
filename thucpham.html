@@ -78,6 +78,8 @@
     <script type='text/javascript' src='assets/js/jquery/jquery-migrate-js.js'></script>
     <script type="text/javascript" src="assets/js/scripts/script.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -574,22 +576,13 @@
                                         </select>
                                     </div>
                                     <h3 class="checkboxes-categories-title space">Các loại</h3>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" value="thit">
-                                        <span class="checkmark"></span>
-                                        Thịt </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" value="rau">
-                                        <span class="checkmark"></span>
-                                        Rau </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" value="cuqua">
-                                        <span class="checkmark"></span>
-                                        Củ quả </label>
-                                    <br>
-                                    <br>
-                                    <div class="state-submit submit">
-                                        <button type="submit" class="form-control btn btn-success">Search</button>
+                                    <div class="list-foods">
+                                        <div class="food"><button class="btn btn-food active" type="button"
+                                                name="thit">Thịt</button></div>
+                                        <div class="food"><button class="btn btn-food" type="button"
+                                                name="thit">Rau</button></div>
+                                        <div class="food"><button class="btn btn-food" type="button" name="thit">Củ
+                                                quả</button></div>
                                     </div>
                                 </div>
                             </form>
@@ -597,146 +590,296 @@
                         <!-- List -->
                         <div class="col-md-6 main-content">
                             <div class="row">
-                                <div class="col-md-4 ">
-                                    <div class="listings_custom listing-taxonomy-shortcode">
-                                        <div class="listing-thumbnail">
-                                            <a class="relative" href="#"><img class="listing_post_image"
-                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
-                                                    alt="Cheesy Sausage Lasagna with soup"></a>
+                                <div class="carousel-food">
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="title-n-categories" style="text-align: center;">
-                                            <h3 class="post-name recipe--name">
-                                                <a id="data-id-20166" href="#" title="Thịt heo cô bê">
-                                                    Thịt heo cô bê </a>
-                                            </h3>
-                                            <div style="display: flex; align-items: center; flex-direction: column;">
-                                                <input class=" khoiluong" type="number" placeholder="Khối lượng (gram)"
-                                                    name="khoiluong" min="0" title="Gram"
-                                                    onmouseover="this.title='Khối lượng (gram)'">
-                                                <div class="btn"
-                                                    style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
-                                                    Chọn</div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%; ">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
+                                                        Chọn</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="listings_custom listing-taxonomy-shortcode">
+                                            <div class="listing-thumbnail">
+                                                <a class="relative" href="#"><img class="listing_post_image"
+                                                        src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                        alt="Cheesy Sausage Lasagna with soup"></a>
+                                            </div>
+                                            <div class="title-n-categories" style="text-align: center;">
+                                                <h3 class="post-name recipe--name">
+                                                    <a id="data-id-20166" href="#" title="Thịt heo cô bê">
+                                                        Thịt heo cô bê </a>
+                                                </h3>
+                                                <div
+                                                    style="display: flex; align-items: center; flex-direction: column;">
+                                                    <input class=" khoiluong" type="number"
+                                                        placeholder="Khối lượng (gram)" name="khoiluong" min="0"
+                                                        title="Gram" onmouseover="this.title='Khối lượng (gram)'">
+                                                    <div class="btn"
+                                                        style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%; ">
+                                                        Chọn</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4 ">
-                                    <div class="listings_custom listing-taxonomy-shortcode">
-                                        <div class="listing-thumbnail">
-                                            <a class="relative" href="#"><img class="listing_post_image"
-                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
-                                                    alt="Cheesy Sausage Lasagna with soup"></a>
-                                        </div>
-                                        <div class="title-n-categories" style="text-align: center;">
-                                            <h3 class="post-name recipe--name">
-                                                <a id="data-id-20166" href="#" title="Thịt heo cô bê">
-                                                    Thịt heo cô bê </a>
-                                            </h3>
-                                            <div style="display: flex; align-items: center; flex-direction: column;">
-                                                <input class=" khoiluong" type="number" placeholder="Khối lượng (gram)"
-                                                    name="khoiluong" min="0" title="Gram"
-                                                    onmouseover="this.title='Khối lượng (gram)'">
-                                                <div class="btn"
-                                                    style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
-                                                    Chọn</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 ">
-                                    <div class="listings_custom listing-taxonomy-shortcode">
-                                        <div class="listing-thumbnail">
-                                            <a class="relative" href="#"><img class="listing_post_image"
-                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
-                                                    alt="Cheesy Sausage Lasagna with soup"></a>
-                                        </div>
-                                        <div class="title-n-categories" style="text-align: center;">
-                                            <h3 class="post-name recipe--name">
-                                                <a id="data-id-20166" href="#" title="Thịt heo cô bê">
-                                                    Thịt heo cô bê </a>
-                                            </h3>
-                                            <div style="display: flex; align-items: center; flex-direction: column;">
-                                                <input class=" khoiluong" type="number" placeholder="Khối lượng (gram)"
-                                                    name="khoiluong" min="0" title="Gram"
-                                                    onmouseover="this.title='Khối lượng (gram)'">
-                                                <div class="btn"
-                                                    style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
-                                                    Chọn</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 ">
-                                    <div class="listings_custom listing-taxonomy-shortcode">
-                                        <div class="listing-thumbnail">
-                                            <a class="relative" href="#"><img class="listing_post_image"
-                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
-                                                    alt="Cheesy Sausage Lasagna with soup"></a>
-                                        </div>
-                                        <div class="title-n-categories" style="text-align: center;">
-                                            <h3 class="post-name recipe--name">
-                                                <a id="data-id-20166" href="#" title="Thịt heo cô bê">
-                                                    Thịt heo cô bê </a>
-                                            </h3>
-                                            <div style="display: flex; align-items: center; flex-direction: column;">
-                                                <input class=" khoiluong" type="number" placeholder="Khối lượng (gram)"
-                                                    name="khoiluong" min="0" title="Gram"
-                                                    onmouseover="this.title='Khối lượng (gram)'">
-                                                <div class="btn"
-                                                    style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
-                                                    Chọn</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 ">
-                                    <div class="listings_custom listing-taxonomy-shortcode">
-                                        <div class="listing-thumbnail">
-                                            <a class="relative" href="#"><img class="listing_post_image"
-                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
-                                                    alt="Cheesy Sausage Lasagna with soup"></a>
-                                        </div>
-                                        <div class="title-n-categories" style="text-align: center;">
-                                            <h3 class="post-name recipe--name">
-                                                <a id="data-id-20166" href="#" title="Thịt heo cô bê">
-                                                    Thịt heo cô bê </a>
-                                            </h3>
-                                            <div style="display: flex; align-items: center; flex-direction: column;">
-                                                <input class=" khoiluong" type="number" placeholder="Khối lượng (gram)"
-                                                    name="khoiluong" min="0" title="Gram"
-                                                    onmouseover="this.title='Khối lượng (gram)'">
-                                                <div class="btn"
-                                                    style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
-                                                    Chọn</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 ">
-                                    <div class="listings_custom listing-taxonomy-shortcode">
-                                        <div class="listing-thumbnail">
-                                            <a class="relative" href="#"><img class="listing_post_image"
-                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
-                                                    alt="Cheesy Sausage Lasagna with soup"></a>
-                                        </div>
-                                        <div class="title-n-categories" style="text-align: center;">
-                                            <h3 class="post-name recipe--name">
-                                                <a id="data-id-20166" href="#" title="Thịt heo cô bê">
-                                                    Thịt heo cô bê </a>
-                                            </h3>
-                                            <div style="display: flex; align-items: center; flex-direction: column;">
-                                                <input class=" khoiluong" type="number" placeholder="Khối lượng (gram)"
-                                                    name="khoiluong" min="0" title="Gram"
-                                                    onmouseover="this.title='Khối lượng (gram)'">
-                                                <div class="btn"
-                                                    style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%; ">
-                                                    Chọn</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
                                 <div class="modeltheme-pagination-holder col-md-12">
                                     <div class="modeltheme-pagination pagination">
                                     </div>
@@ -851,25 +994,235 @@
                 </div>
                 <div class="detail-in ">
                     <div class="containers">
-                        <h3>Danh sách các Menu được đề xuất</h3>
-                        <div class="list-menu">
+                        <h3 style="font-weight: bold;">Danh sách các Menu được đề xuất</h3>
+                        <div class="list-menu" style="width: 900px; max-width: 900px; margin: 0 auto;">
                             <ul>
                                 <li>
-                                    <a href="#" title="Menu 1">Menu 1</a>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay Thịt heo xào rau củ</a>
+                                                <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều
+                                                    rau
+                                                    củ siêu ngon siêu xin dành cho người ăn chay Thịt heo xào rau củ</a>
+                                                    <span class="desr" style="color: #606060b0;">Thịt heo được xào với
+                                                        nhiều rau
+                                                        củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href="#" title="Menu 2">Menu 2</a>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href="#" title="Menu 3">Menu 3</a>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href="#" title="Menu 4">Menu 4</a>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href="#" title="Menu 5">Menu 5</a>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay Thịt heo được xào với nhiều
+                                                rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div title="Thịt heo xào rau củ"
+                                        style=" display: flex;align-items: center; justify-content: space-between;">
+                                        <div
+                                            style="text-align: initial;display: flex; flex-direction: column; width: 500px;">
+                                            <a href="#" class="title-menu">Thịt heo xào rau củ</a>
+                                            <span class="desr" style="color: #606060b0;">Thịt heo được xào với nhiều rau
+                                                củ siêu ngon siêu xin dành cho người ăn chay</span>
+                                        </div>
+                                        <div style="width: 25%; max-width: 30%;">
+                                            <a href="#">
+                                                <img class="listing_post_image"
+                                                    src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSgHsjX4y7hQT1XDhBxjMjPudyd4DsJHHcXPzFIkPtPZjLeAqY7h5FaBDrpNmpXLiOP"
+                                                    alt="Cheesy Sausage Lasagna with soup">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
+                            <div id="pagination-container"></div>
                         </div>
 
                     </div>
@@ -885,8 +1238,11 @@
     <script type='text/javascript' src='/assets/js/scripts/wpb_composer_front.js'></script>
     <script type='text/javascript' src='/assets/js/scripts/vc_waypoints.js'></script>
     <script type='text/javascript' src='/assets/js/jquery/jquery-validation.js'></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script type='text/javascript' src='/assets/js/scripts/jquery.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
 
 </body>
 

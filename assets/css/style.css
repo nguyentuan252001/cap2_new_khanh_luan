@@ -204,28 +204,31 @@
 
 .modal-menu {
     position: fixed;
-    top: 20%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 8px;
-    width: 500px;
+    width: 1100px;
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     z-index: 99999;
     text-align: center;
 }
 
-.modal-menu .list-menu ul {
+/* .modal-menu .list-menu ul {
     display: flex;
-}
+} */
 
 .modal-menu .list-menu ul li {
-    background: #a3a636;
     border-radius: 20px;
     text-align: center;
     padding: 5px 10px;
     margin-left: 10px;
     transition: all 0.3s linear;
+}
+
+.modal-menu .list-menu ul li img {
+    border-radius: 10px;
 }
 
 .modal-menu .list-menu ul li:hover {
@@ -234,7 +237,10 @@
 }
 
 .modal-menu .list-menu ul a {
-    color: #fff;
+    color: #000;
+    font-size: 18px;
+    margin-right: 15px;
+    font-weight: bold;
 }
 
 .modal-menu .cls {
@@ -331,3 +337,65 @@ input.khoiluong {
     text-align: center;
     width: 100%;
 }
+
+.list-foods {
+    text-align: center;
+}
+
+.btn-food {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #302f2f;
+    font-size: 16px;
+}
+
+button:active {
+    outline: none;
+    border: none;
+}
+
+.btn-food.active {
+    background: #e1828d;
+    color: #fff;
+}
+
+.btn-food:hover {
+    background: #e1828d;
+}
+
+/* .slick-initialized .slick-slide {
+    width: 280px !important;
+} */
+
+
+/* ===================================Pagination============================= */
+/* #pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+} */
+
+#pagination-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#pagination-container span {
+    color: #666;
+    text-decoration: none;
+    border: 1px solid #EEE;
+    box-shadow: 0px 0px 10px 0px #EEE;
+}
+
+#pagination-container .current {
+    color: #000;
+}
+
+#pagination-container .prev.current,
+#pagination-container .next.current {
+    background: #e7e4e5;
+}
+/* ===================================Pagination============================= */
