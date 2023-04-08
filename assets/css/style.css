@@ -1,0 +1,333 @@
+.vc_custom_1580816690770 {
+    margin-bottom: 0px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    background-image: url(https://foodhub.modeltheme.com/wp-content/uploads/2020/02/foodhub-slider-main-food-v4-b.jpg?id=20716) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1580816696612 {
+    margin-bottom: 0px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    background-image: url(https://foodhub.modeltheme.com/wp-content/uploads/2020/02/foodhub-slider-main-food-2.jpg?id=20706) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1580822322433 {
+    margin-bottom: 0px !important;
+    padding-top: 100px !important;
+    padding-bottom: 95px !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1571038539222 {
+    margin-bottom: 0px !important;
+    padding-top: 65px !important;
+    padding-bottom: 70px !important;
+}
+
+.vc_custom_1580822018446 {
+    margin-bottom: 30px !important;
+    padding-top: 120px !important;
+    padding-bottom: 180px !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.vc_custom_1580290639624 {
+    margin-bottom: 0px !important;
+    padding-top: 35px !important;
+    padding-bottom: 55px !important;
+}
+
+.vc_custom_1580291324698 {
+    margin-bottom: 0px !important;
+    padding-top: 60px !important;
+    padding-bottom: 50px !important;
+    background-color: #fafafa !important;
+}
+
+.vc_custom_1575890071159 {
+    margin-bottom: 3px !important;
+    padding-top: 60px !important;
+    padding-bottom: 45px !important;
+}
+
+.vc_custom_1575890105457 {
+    margin-bottom: 0px !important;
+    padding-top: 65px !important;
+    padding-bottom: 10px !important;
+    background-color: #fafafa !important;
+}
+
+.vc_custom_1575889706057 {
+    margin-bottom: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    background-color: #fafafa !important;
+}
+
+.vc_custom_1575890129624 {
+    margin-bottom: 0px !important;
+    padding-top: 60px !important;
+    background-color: #fafafa !important;
+}
+
+.vc_custom_1567671435223 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1579008276930 {
+    padding-right: 20px !important;
+    padding-left: 80px !important;
+}
+
+.vc_custom_1572604898055 {
+    margin-top: 0px !important;
+}
+
+.vc_custom_1572604905149 {
+    margin-top: 0px !important;
+}
+
+.vc_custom_1567671435223 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1579008276930 {
+    padding-right: 20px !important;
+    padding-left: 80px !important;
+}
+
+.vc_custom_1572604898055 {
+    margin-top: 0px !important;
+}
+
+.vc_custom_1572604905149 {
+    margin-top: 0px !important;
+}
+
+.vc_custom_1567671435223 {
+    padding-top: 0px !important;
+}
+
+.vc_custom_1579008276930 {
+    padding-right: 20px !important;
+    padding-left: 80px !important;
+}
+
+.vc_custom_1580903358171 {
+    margin-top: 0px !important;
+}
+
+.vc_custom_1572604905149 {
+    margin-top: 0px !important;
+}
+
+.vc_custom_1545063501314 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1570439646763 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1580291314512 {
+    margin-bottom: 0px !important;
+}
+
+.vc_custom_1570606223231 {
+    margin-bottom: 20px !important;
+}
+
+.vc_custom_1572609573851 {
+    margin-right: 30px !important;
+    padding-right: 35px !important;
+}
+
+.vc_custom_1580218272653 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    background-color: #ffc42b !important;
+    border-radius: 10px !important;
+}
+
+.vc_custom_1570611944984 {
+    margin-bottom: 45px !important;
+}
+
+/* ======================================================= */
+@keyframes downtop {
+    0% {
+
+        transform: translate(-50%, -170%);
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        visibility: visible;
+    }
+}
+
+@keyframes topdown {
+    0% {
+        transform: translate(-50%, -50%);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translate(-50%, -170%) scale(0);
+        visibility: hidden;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.7;
+    z-index: 99999;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-menu {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    width: 500px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 99999;
+    text-align: center;
+}
+
+.modal-menu .list-menu ul {
+    display: flex;
+}
+
+.modal-menu .list-menu ul li {
+    background: #a3a636;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px 10px;
+    margin-left: 10px;
+    transition: all 0.3s linear;
+}
+
+.modal-menu .list-menu ul li:hover {
+    opacity: 0.8;
+    transition: all 0.3s linear;
+}
+
+.modal-menu .list-menu ul a {
+    color: #fff;
+}
+
+.modal-menu .cls {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    opacity: 0.6;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: #000;
+}
+
+.modal-menu .cls:hover {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+.btn {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.btn-menu {
+    background: #b21023;
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+}
+
+.button-winona.btn.btn-medium:hover {
+    color: #e1828d !important;
+}
+
+.fist-outstanding {
+    width: 270%;
+}
+
+.card {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-outstanding {
+    border-radius: 20px;
+}
+
+.card .content {
+    font-size: 18px;
+    padding-left: 15px;
+    color: #606060;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input.khoiluong {
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    border: 1px solid #a8a4a4;
+    padding: 4px 15px;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+}
