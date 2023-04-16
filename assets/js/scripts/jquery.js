@@ -1,16 +1,27 @@
 jQuery(document).ready(function () {
+    console.log(1);
     jQuery(".btn-menu").on('click', function () {
         jQuery(".modal-menu").css('animation', 'downtop 0.5s ease-in-out forwards')
         jQuery(".modal-menu").css('display', 'block')
         jQuery(".overlay").css('display', 'block');
     });
 
+    jQuery(".input-baidang").on('click', function () {
+        jQuery(".modal-baidang").css('animation', 'downtop 0.5s ease-in-out forwards')
+        jQuery(".modal-baidang").css('display', 'block')
+        jQuery(".overlay").css('display', 'block');
+    });
+
     jQuery(".overlay").on('click', function () {
         jQuery(".modal-menu").css('animation', 'topdown 0.5s ease-in-out forwards')
+        jQuery(".modal-baidang").css('animation', 'topdown 0.5s ease-in-out forwards')
+        jQuery(".modal-congthuc").css('animation', 'topdown 0.5s ease-in-out forwards')
         jQuery(this).css('display', 'none');
     });
     jQuery(".cls").on('click', function () {
         jQuery(".modal-menu").css('animation', 'topdown 0.5s ease-in-out forwards')
+        jQuery(".modal-baidang").css('animation', 'topdown 0.5s ease-in-out forwards')
+        jQuery(".modal-congthuc").css('animation', 'topdown 0.5s ease-in-out forwards')
         jQuery(".overlay").css('display', 'none');
     });
 
@@ -73,4 +84,11 @@ jQuery(document).ready(function () {
                 .slice(showFrom, showTo).show();
         }
     });
+
+    jQuery(".avatar").click(function () {
+        jQuery(".profile").toggle();
+        jQuery(".profile").css('animation', 'show 0.5s ease-in-out forwards')
+    });
+    // Show more content
+
 });
