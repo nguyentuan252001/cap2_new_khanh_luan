@@ -76,168 +76,106 @@
     </noscript>
     <script type='text/javascript' src='assets/js/jquery/jquery-core-js.js'></script>
     <script type='text/javascript' src='assets/js/jquery/jquery-migrate-js.js'></script>
+    <script type="text/javascript" src="assets/js/scripts/script.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
-
-    <style>
-        .is_header_semitransparent #page>header.header1 {
-            background: #333;
-            height: 80px;
-        }
-
-        .like-cmt {
-            display: inline-block;
-            width: 96%;
-            text-align: center;
-            border-top: 1px solid #e6dede;
-            padding: 5px 0;
-            border-bottom: 1px solid #e6dede;
-            transform: translateX(-50%);
-            left: 50%;
-            position: relative;
-            margin-bottom: 10px;
-        }
-
-        .like-cmt .like {
-            position: relative;
-            left: -150px;
-            padding: 8px 80px;
-        }
-
-        .like-cmt .cmt {
-            position: relative;
-            left: -100px;
-            padding: 8px 80px;
-        }
-
-        .like-cmt div:hover {
-            background: #3333;
-            transition: all 0.3s linear;
-        }
-
-        .like-cmt div {
-            cursor: pointer;
-            font-size: 16px;
-            display: inline-block;
-            transition: all 0.3s linear;
-        }
-
-        /* Content desciption */
-        #content-description {
-            position: relative;
-        }
-
-        #content-description .text {
-            /*   width: 660px;  */
-            margin-bottom: 5px;
-            color: #777;
-            padding: 0 15px;
-            position: relative;
-            font-family: Arial;
-            font-size: 14px;
-            display: block;
-        }
-
-        #content-description .show-more {
-            position: relative;
-            font-size: 12px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        #content-description .show-more:hover {
-            color: #1779dd;
-        }
-
-        #content-description .show-more-height {
-            height: 100%;
-            display: -webkit-box;
-            max-height: 15rem;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: normal;
-            -webkit-line-clamp: 3;
-        }
-
-        .setting-sub {
-            display: block;
-            position: absolute;
-            background: #fff;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            width: 200px;
-            margin: 0;
-            padding: 0;
-            right: 20px;
-            border-radius: 10px;
-            z-index: 1111;
-        }
-
-        .setting-sub li {
-            padding: 5px;
-            cursor: pointer;
-            padding: 10px 20px;
-            transition: all 0.2s linear;
-        }
-
-        .setting-sub li:hover {
-            background-color: #33333311;
-            transition: all 0.2s linear;
-        }
-
-        .tencongthuc input {
-            padding: 10px 15px;
-            border-radius: 10px;
-            border: 1px solid #3333;
-            width: 100%;
-        }
-
-        .form-group.hinhanh {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            overflow: hidden;
-        }
-
-        .profile-pic {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .file-upload {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: pointer;
-        }
-
-        .form-control {
-            border-radius: 10px;
-        }
-
-
-        .loadMore2 {
-            display: none;
-        }
-
-        .loadHide2 {
-            display: none;
-        }
-
-        .flex {
-            display: flex;
-            align-items: center;
-        }
-
-        .box-content .item-blog {
-            display: none;
-        }
-    </style>
 </head>
+<style>
+    p {
+        margin: 0;
+    }
+
+    .is_header_semitransparent #page>header.header1 {
+        height: 80px;
+        background: #333;
+    }
+
+    .nguyenlieu {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .list-mon {
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
+    .list-mon:hover {
+        cursor: pointer;
+        background-color: #3333;
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        opacity: 0.3;
+        transform: scale(0);
+        transition: all 0.3s linear;
+    }
+
+    .link-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+    }
+
+
+
+    .link-video i {
+        font-size: 76px;
+        color: #c60c0c;
+        transform: scale(0);
+        transition: all 0.3s linear;
+
+    }
+
+    .rating-stars ul {
+        list-style-type: none;
+        padding: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .rating-stars ul>li.star {
+        display: inline-block;
+
+    }
+
+    .none-star {
+        color: #ccc;
+    }
+
+    .rating-stars ul>li.star>i.fa {
+        font-size: 1.2em;
+        color: #ccc;
+    }
+
+    .rating-stars ul>li.star.hover>i.fa {
+        color: #efe707;
+    }
+
+    .rating-stars ul>li.star.selected>i.fa {
+        color: #efe707;
+    }
+
+    .loadMore {
+        display: none;
+    }
+
+    .loadHide {
+        display: none;
+    }
+
+    .box-content .item {
+        display: none;
+    }
+</style>
 
 <body class="  header1 is_header_semitransparent">
     <div class="modeltheme-overlay"></div>
@@ -284,8 +222,7 @@
                             </button>
                             <h1 class="logo">
                                 <a href="https://foodhub.modeltheme.com">
-                                    <img src="https://foodhub.modeltheme.com/wp-content/themes/foodhub/images/logo.png"
-                                        alt="Foodhub" />
+                                    logo
                                 </a>
                             </h1>
                         </div>
@@ -684,379 +621,266 @@
         </header>
         <!-- Header -->
         <!-- Container -->
-        <div class="container" style="padding: 120px 150px  !important; ">
-            <div class="row">
-                <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1570439646763">
-                    <div class="wpb_column vc_column_container vc_col-sm-4">
-                        <div class="vc_column-inner" style="position: fixed;width: 25%; top: 0; bottom: 0;">
-                            <div class="wpb_wrapper" style="padding-top: 100px;">
-                                <div style="background-color:#528f2d; height: 660px;"
-                                    class="category-list-shortcode-wrapper">
-                                    <h3 class="category-list-title">Categories:</h3>
-                                    <div class="category-list-shortcode category-list-0">
-                                        <div class="cat-icon"><img alt="cat-icon" class="cat-icon"
-                                                src="/assets/images/categorys/post-category01.png">
-                                        </div>
-                                        <div class="cat-info"><a class="cat-name"
-                                                href="https://foodhub.modeltheme.com/category/kitchen/">Kitchen</a><span
-                                                class="count-posts">5 Posts</span></div>
-                                    </div>
-                                    <div class="category-list-shortcode category-list-1">
-                                        <div class="cat-icon"><img alt="cat-icon" class="cat-icon"
-                                                src="/assets/images/categorys/post-categories2.png">
-                                        </div>
-                                        <div class="cat-info"><a class="cat-name"
-                                                href="https://foodhub.modeltheme.com/category/restaurants/">Restaurants</a><span
-                                                class="count-posts">3 Posts</span></div>
-                                    </div>
-                                    <div class="category-list-shortcode category-list-2">
-                                        <div class="cat-icon"><img alt="cat-icon" class="cat-icon"
-                                                src="/assets/images/categorys/post-categories4.png">
-                                        </div>
-                                        <div class="cat-info"><a class="cat-name"
-                                                href="https://foodhub.modeltheme.com/category/catering-events/">Events</a><span
-                                                class="count-posts">3 Posts</span></div>
-                                    </div>
-                                    <div class="category-list-shortcode category-list-3">
-                                        <div class="cat-icon"><img alt="cat-icon" class="cat-icon"
-                                                src="/assets/images/categorys/post-categories5.png">
-                                        </div>
-                                        <div class="cat-info"><a class="cat-name"
-                                                href="https://foodhub.modeltheme.com/category/healthy-lifestyle/">Lifestyle</a><span
-                                                class="count-posts">3 Posts</span></div>
-                                    </div>
-                                    <div class="category-list-shortcode category-list-4">
-                                        <div class="cat-icon"><img alt="cat-icon" class="cat-icon"
-                                                src="/assets/images/categorys/post-categories3.png">
-                                        </div>
-                                        <div class="cat-info"><a class="cat-name"
-                                                href="https://foodhub.modeltheme.com/category/reviews/">Reviews</a><span
-                                                class="count-posts">2 Posts</span></div>
-                                    </div>
-                                    <div class="category-list-shortcode category-list-5">
-                                        <div class="cat-icon"><img alt="cat-icon" class="cat-icon"
-                                                src="/assets/images/categorys/cuisine-category.png">
-                                        </div>
-                                        <div class="cat-info"><a class="cat-name"
-                                                href="https://foodhub.modeltheme.com/category/cuisine/">Cuisine</a><span
-                                                class="count-posts">2 Posts</span></div>
-                                    </div>
-                                    <div class="category-list-shortcode category-list-6">
-                                        <div class="cat-icon"><img alt="cat-icon" class="cat-icon"
-                                                src="/assets/images/categorys/soup-category.png">
-                                        </div>
-                                        <div class="cat-info"><a class="cat-name"
-                                                href="https://foodhub.modeltheme.com/category/soups/">Soups</a><span
-                                                class="count-posts">1 Posts</span></div>
-                                    </div>
-                                </div>
-                            </div>
+        <div id="primary" style="padding-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Danh sách các món</h3>
+                        <div>
+                            <ul>
+                                <li class="form-control list-mon">
+                                    <p>List 1</p>
+                                </li>
+                                <li class="form-control list-mon">
+                                    <p>List 2</p>
+                                </li>
+                                <li class="form-control list-mon">
+                                    <p>List 3</p>
+                                </li>
+                                <li class="form-control list-mon">
+                                    <p>List 4</p>
+                                </li>
+                                <li class="form-control list-mon">
+                                    <p>List 5</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-8">
-                        <div class="wpb_wrapper">
-                            <h3>Bài đăng</h3>
-                            <div class="baidang-form">
-                                <div class="card-baidang">
-                                    <div
-                                        style="display: flex; align-items: center;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding: 15px; border-radius: 10px; margin-bottom: 40px;">
-                                        <div>
-                                            <img src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/316540088_1536458673482543_7336037853642107077_n.jpg?stp=cp0_dst-jpg_p48x48&amp;_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=7206a8&amp;_nc_ohc=IT0iH7PkknIAX85kYh8&amp;_nc_ht=scontent.fdad3-1.fna&amp;oh=00_AfDkEo0mwc6sUV2vEaDRFiMBJ6EUIzb5MGEUdhsPHE04qA&amp;oe=643FA4D1"
-                                                style="height: 45px; width: 45px; border-radius: 50%;">
-                                        </div>
-                                        <div style="margin-left: 10px;  width: 90%;">
-                                            <input style="cursor: pointer; border-radius: 20px; padding: 6px 15px;"
-                                                class="form-control input-baidang" type="text"
-                                                placeholder="Đăng bài đăng của bạn...">
-                                        </div>
+                    <div class="col-md-9">
+                        <!-- Nguyên liệu -->
+                        <div>
+                            <h3>Công thức củ cải ngâm nước mắm ớt</h3>
+                            <div class="nguyenlieu">
+                                <h5>Nguyên liệu làm củ cải</h5>
+                                <div>
+                                    <div style="display: flex; align-items: center ;">
+                                        <p style="width: 100px; min-width: 100px;">Củ cải trắng </p>
+                                        <p>300gr</p>
+                                    </div>
+                                    <div style="display: flex; align-items: center ;">
+                                        <p style="width: 100px; min-width: 100px;">Ớt tươi</p>
+                                        <p>6 quả</p>
+                                    </div>
+                                    <div style="display: flex; align-items: center ;">
+                                        <p style="width: 100px; min-width: 100px;">Tỏi</p>
+                                        <p>1 củ</p>
+                                    </div>
+                                    <div style="display: flex; align-items: center ;">
+                                        <p style="width: 100px; min-width: 100px;">Nước mém </p>
+                                        <p>2 muỗng canh</p>
+                                    </div>
+                                    <div style="display: flex; align-items: center ;">
+                                        <p style="width: 100px; min-width: 100px;">Muối đường</p>
+                                        <p>1 ít</p>
                                     </div>
                                 </div>
-                                <div class="modal-baidang" style="display: none;">
-                                    <div class="modal-body" style="padding: 0 0 10px 0;">
-                                        <div class="cls"
-                                            style="cursor: pointer; position: absolute;right: 30px;  background: #3333;  padding: 10px 15px;border-radius: 100px;">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </div>
-                                        <div class="detail-in ">
-                                            <div class="containers">
-                                                <h2 style="font-weight: bold;">Bài đăng</h2>
-                                                <div class="list-menu"
-                                                    style="width: 900px; max-width: 900px; margin: 0 auto;">
-                                                    <form class="congthuc">
-                                                        <div class="form-group tencongthuc" style="text-align: left;">
-                                                            <label><b>Tiêu đề</b></label> <br>
-                                                            <input class="form-control" type="text" name="cook_name">
-                                                        </div>
-                                                        <div class="form-group hinhanh" style="text-align: left;">
-                                                            <label><b>Hình ảnh</b></label> <br>
-                                                            <img class="profile-pic" src="" />
-                                                            <input class="file-upload" type="file" accept="image/*" />
-                                                        </div>
-                                                        <div class="form-group mota" style="text-align: left;">
-                                                            <label><b>Mô tả</b></label> <br>
-                                                            <textarea class="form-control" name="description" rows="4"
-                                                                cols="50"></textarea>
-                                                        </div>
-                                                        <div class="form-group linkct" style="text-align: left;">
-                                                            <label><b>Link Công thức</b></label> <br>
-                                                            <input type="text" name="link" class="form-control"
-                                                                style="padding: 6px 15px; border-radius: 10px; border: none;">
-                                                        </div>
-                                                        <button class="btn btn-success" type="submit" name="submit">Đăng
-                                                            bài</button>
-                                                    </form>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-                        <div class="wpb_wrapper">
-                            <div class="blog_custom"
-                                style="margin-bottom: 20px;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding: 15px; border-radius: 10px;">
-                                <div class="post-details col-md-12">
-                                    <div class="title-n-excerpt">
-                                        <div
-                                            style="display: flex; align-items: center; justify-content: space-between;">
-                                            <div class="left" style="display: flex; align-items: center;">
-                                                <div>
-                                                    <img src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/316540088_1536458673482543_7336037853642107077_n.jpg?stp=cp0_dst-jpg_p48x48&amp;_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=7206a8&amp;_nc_ohc=IT0iH7PkknIAX85kYh8&amp;_nc_ht=scontent.fdad3-1.fna&amp;oh=00_AfDkEo0mwc6sUV2vEaDRFiMBJ6EUIzb5MGEUdhsPHE04qA&amp;oe=643FA4D1"
-                                                        style="height: 45px; width: 45px; border-radius: 50%;">
-                                                </div>
-                                                <div style="margin-left: 10px;">
-                                                    <h5 style="font-weight: bold; margin: 0; line-height: 1.2;">
-                                                        Pham Van Luan
-                                                    </h5>
-                                                    <span>
-                                                        Hôm qua lúc: 12:17
-                                                        <i class="fa-solid fa-earth-americas"
-                                                            style="position: absolute;margin-left: 5px; color: #5a5555b7;"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="setting">
-                                                <i class="fa-solid fa-ellipsis" style="cursor: pointer;"></i>
-                                                <ul class="setting-sub" style="display: none;">
-                                                    <li>Sub 1</li>
-                                                    <li>Sub 2</li>
-                                                    <li>Sub 3</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="post-excerpt row">
-                                            <p>
-                                            </p>
-                                            <div id="content-description">
-                                                <div class="text show-more-height">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                    Repudiandae, voluptatibus itaque quam quos, velit obcaecati vitae
-                                                    maiores distinctio laudantium, veniam natus veritatis esse dolor.
-                                                    Dolorum illum assumenda suscipit! Asperiores repellendus quos harum
-                                                    laborum! Voluptate sapiente architecto animi commodi enim.
-                                                    Architecto, repellendus? Qui unde neque ullam omnis nulla nesciunt
-                                                    possimus aut aperiam eveniet cupiditate? Facilis architecto iste
-                                                    esse sequi! Numquam consequatur placeat quaerat recusandae omnis non
-                                                    dolorum similique consequuntur labore tempora distinctio nemo nihil
-                                                    nisi ducimus natus excepturi atque culpa, asperiores sapiente iure
-                                                    repellat necessitatibus aut dolore! Repellat veritatis assumenda
-                                                    veniam sapiente, adipisci iste quisquam eum fuga harum, commodi
-                                                    fugiat. A!
-                                                </div>
-                                                <div class="show-more">(Show More)</div>
-                                            </div>
-                                        </div>
+                        <!-- hinh anh  - video -->
+                        <div class="image-video" style="position: relative;">
+                            <div class="image " style="width: 900px; height: 600px;">
+                                <img class="img-fuild" style="width: 100%;height: 100%; border-radius: 10px;"
+                                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                    alt="">
+                                <!-- Link video -->
+                                <a class="link-video" href="https://www.youtube.com/watch?v=-Zefarj0fXE">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </div>
+                            <div class="video"></div>
+                        </div>
+                        <!-- textbox comment -->
+                        <div class="textbox-cmt" style="margin-top: 15px;">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div style="width: 100%; margin-left: 5px;">
+                                        <textarea style="border-radius: 10px;"
+                                            placeholder="Hãy viết gì đó về bài viết..." class="form-control" cols="40"
+                                            rows="10"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12 post-thumbnail">
-                                    <div class="mt_listing--gallery text-center single-icondrops-content">
-                                        <div><a class="mt_listing--single-gallery" style="height: 550px;"
-                                                href="/assets/images/homemade-chocolate-cake-2.jpg">
-                                                <div class="ico-screenshot"><img alt="Gallery foodhub_members0"
-                                                        src="/assets/images/homemade-chocolate-cake-2.jpg">
-                                                    <div class="flex-zone"><span
-                                                            class="flex-zone-inside view-image-btn btn"><i
-                                                                class="fa fa-search" aria-hidden="true"></i></span>
-                                                    </div>
-                                                </div>
-                                            </a></div>
-                                    </div>
-                                </div>
-                                <div class="like-cmt">
-                                    <div class="like">
-                                        <i class="fa-solid fa-thumbs-up" style="font-size: 18px;"></i>
-                                        Like
-                                    </div>
-                                    <div class="cmt">
-                                        <i class="fa-solid fa-comment" style="font-size: 18px;"></i>
-                                        Comment
-                                    </div>
-                                </div>
-                                <div class="textbox-cmt" style="margin-top: 5px;">
-                                    <div class="input-cmt" style="display: flex; align-items: center;">
-                                        <div>
-                                            <image
-                                                src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/316540088_1536458673482543_7336037853642107077_n.jpg?stp=cp0_dst-jpg_p48x48&amp;_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=7206a8&amp;_nc_ohc=IT0iH7PkknIAX85kYh8&amp;_nc_ht=scontent.fdad3-1.fna&amp;oh=00_AfDkEo0mwc6sUV2vEaDRFiMBJ6EUIzb5MGEUdhsPHE04qA&amp;oe=643FA4D1"
-                                                style="height: 45px; width: 45px; border-radius: 50%;"></image>
+                                <div class="col-md-3">
+                                    <div style=" text-align: center;">
+                                        <p style="margin: 0;">Đánh giá</p>
+                                        <div class='rating-stars text-center'>
+                                            <ul id='stars'>
+                                                <li class='star' title='Poor' data-value='1'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star' title='Fair' data-value='2'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star' title='Good' data-value='3'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star' title='Excellent' data-value='4'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                                <li class='star' title='WOW!!!' data-value='5'>
+                                                    <i class='fa fa-star fa-fw'></i>
+                                                </li>
+                                            </ul>
                                         </div>
-
-                                        <div style="width: 95%; margin-left: 5px;">
-                                            <input type="text" name="comment" id="comment"
-                                                placeholder="Nhập comment của bạn..." style="
-                                                
-                                            width: 99%; 
-                                            outline: none;
-                                            border: 1px solid #3333;
-                                            border-radius: 20px;
-                                            padding: 12px;">
-                                            <i class="fa-solid fa-paper-plane" style="
-                                                position: absolute;
-                                                height: 40px;
-                                                line-height: 40px;
-                                                right: 20px;
-                                                padding: 0 10px;
-                                                font-size: 18px;
-                                                cursor: pointer;">
-                                            </i>
-                                        </div>
-                                    </div>
-                                    <div class="box-content">
-                                        <!-- Item -->
-                                        <div class="item-blog">
-                                            <div class="flex">
-                                                <div class="user-cmt">
-                                                    <image
-                                                        src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/316540088_1536458673482543_7336037853642107077_n.jpg?stp=cp0_dst-jpg_p48x48&amp;_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=7206a8&amp;_nc_ohc=IT0iH7PkknIAX85kYh8&amp;_nc_ht=scontent.fdad3-1.fna&amp;oh=00_AfDkEo0mwc6sUV2vEaDRFiMBJ6EUIzb5MGEUdhsPHE04qA&amp;oe=643FA4D1"
-                                                        style="height: 40px; width: 40px; border-radius: 50%;"></image>
-                                                </div>
-                                                <div style="
-                                                    background: #fff; 
-                                                    border: 1px solid #3333;
-                                                    border-radius: 13px;
-                                                    width: max-content;
-                                                    margin-left: 10px;
-                                                    margin-top: 10px;
-                                                    padding:  5px 15px;
-                                                    width: 90%;">
-                                                    <h5 style="margin: 0; padding: 0; font-weight: bold;">Name</h5>
-                                                    <p style="margin: 0; padding: 0;">
-                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-                                                        minus
-                                                        laborum ex voluptas, vel repellendus accusamus soluta
-                                                        voluptatibus
-                                                        quam voluptatum?
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Item -->
-                                        <div class="item-blog">
-                                            <div class="flex">
-                                                <div class="user-cmt">
-                                                    <image
-                                                        src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/316540088_1536458673482543_7336037853642107077_n.jpg?stp=cp0_dst-jpg_p48x48&amp;_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=7206a8&amp;_nc_ohc=IT0iH7PkknIAX85kYh8&amp;_nc_ht=scontent.fdad3-1.fna&amp;oh=00_AfDkEo0mwc6sUV2vEaDRFiMBJ6EUIzb5MGEUdhsPHE04qA&amp;oe=643FA4D1"
-                                                        style="height: 40px; width: 40px; border-radius: 50%;"></image>
-                                                </div>
-                                                <div style="
-                                                background: #fff; 
-                                                border: 1px solid #3333;
-                                                border-radius: 13px;
-                                                width: max-content;
-                                                margin-left: 10px;
-                                                margin-top: 10px;
-                                                padding:  5px 15px;
-                                                width: 90%;">
-                                                    <h5 style="margin: 0; padding: 0; font-weight: bold;">Name</h5>
-                                                    <p style="margin: 0; padding: 0;">
-                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-                                                        minus
-                                                        laborum ex voluptas, vel repellendus accusamus soluta
-                                                        voluptatibus
-                                                        quam voluptatum?
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Item -->
-                                        <div class="item-blog">
-                                            <div class="flex">
-                                                <div class="user-cmt">
-                                                    <image
-                                                        src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/316540088_1536458673482543_7336037853642107077_n.jpg?stp=cp0_dst-jpg_p48x48&amp;_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=7206a8&amp;_nc_ohc=IT0iH7PkknIAX85kYh8&amp;_nc_ht=scontent.fdad3-1.fna&amp;oh=00_AfDkEo0mwc6sUV2vEaDRFiMBJ6EUIzb5MGEUdhsPHE04qA&amp;oe=643FA4D1"
-                                                        style="height: 40px; width: 40px; border-radius: 50%;"></image>
-                                                </div>
-                                                <div style="
-                                                    background: #fff; 
-                                                    border: 1px solid #3333;
-                                                    border-radius: 13px;
-                                                    width: max-content;
-                                                    margin-left: 10px;
-                                                    margin-top: 10px;
-                                                    padding:  5px 15px;
-                                                    width: 90%;">
-                                                    <h5 style="margin: 0; padding: 0; font-weight: bold;">Name</h5>
-                                                    <p style="margin: 0; padding: 0;">
-                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-                                                        minus
-                                                        laborum ex voluptas, vel repellendus accusamus soluta
-                                                        voluptatibus
-                                                        quam voluptatum?
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Item -->
-                                        <div class="item-blog">
-                                            <div class="flex">
-                                                <div class="user-cmt">
-                                                    <image
-                                                        src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-1/316540088_1536458673482543_7336037853642107077_n.jpg?stp=cp0_dst-jpg_p48x48&amp;_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=7206a8&amp;_nc_ohc=IT0iH7PkknIAX85kYh8&amp;_nc_ht=scontent.fdad3-1.fna&amp;oh=00_AfDkEo0mwc6sUV2vEaDRFiMBJ6EUIzb5MGEUdhsPHE04qA&amp;oe=643FA4D1"
-                                                        style="height: 40px; width: 40px; border-radius: 50%;"></image>
-                                                </div>
-                                                <div style="
-                                                    background: #fff; 
-                                                    border: 1px solid #3333;
-                                                    border-radius: 13px;
-                                                    width: max-content;
-                                                    margin-left: 10px;
-                                                    margin-top: 10px;
-                                                    padding:  5px 15px;
-                                                    width: 90%;">
-                                                    <h5 style="margin: 0; padding: 0; font-weight: bold;">Name</h5>
-                                                    <p style="margin: 0; padding: 0;">
-                                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-                                                        minus
-                                                        laborum ex voluptas, vel repellendus accusamus soluta
-                                                        voluptatibus
-                                                        quam voluptatum?
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- load more -->
-                                    <div class="loadMore2"
-                                        style="text-align: right; margin-right: 40px; cursor: pointer;">
-                                        <div>Load More</div>
-                                    </div>
-                                    <div class="loadHide2"
-                                        style="text-align: right; margin-right: 40px; cursor: pointer;">
-                                        <div>Hide</div>
+                                        <div class="btn btn-success" style="margin-top: 40px;"> Hoàn thành</div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- list comment -->
+                            <div class="box-content">
+                                <!-- Item comment -->
+                                <div class="item">
+                                    <div style="
+                                        background: #fff; 
+                                        border: none;
+                                        border-bottom:  1px solid #3333;;
+                                        width: max-content;
+                                        margin-left: 10px;
+                                        margin-top: 10px;
+                                        margin-bottom: 20px;
+                                        padding:  5px 15px;
+                                        width: 90%;">
+                                        <h5 style="margin: 0; padding: 0; font-weight: bold;">
+                                            Nguyen Van A
+                                        </h5>
+                                        <div class="rate">
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                        </div>
+                                        <p style="margin: 0; padding: 0;">
+                                            Công thức hay 1
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Item comment -->
+                                <div class="item">
+                                    <div style="
+                                        background: #fff; 
+                                        border: none;
+                                        border-bottom:  1px solid #3333;;
+                                        width: max-content;
+                                        margin-left: 10px;
+                                        margin-top: 10px;
+                                        margin-bottom: 20px;
+                                        padding:  5px 15px;
+                                        width: 90%;">
+                                        <h5 style="margin: 0; padding: 0; font-weight: bold;">
+                                            Nguyen Van A
+                                        </h5>
+                                        <div class="rate">
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                        </div>
+                                        <p style="margin: 0; padding: 0;">
+                                            Công thức hay 2
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Item comment -->
+                                <div class="item">
+                                    <div style="
+                                        background: #fff; 
+                                        border: none;
+                                        border-bottom:  1px solid #3333;;
+                                        width: max-content;
+                                        margin-left: 10px;
+                                        margin-top: 10px;
+                                        margin-bottom: 20px;
+                                        padding:  5px 15px;
+                                        width: 90%;">
+                                        <h5 style="margin: 0; padding: 0; font-weight: bold;">
+                                            Nguyen Van A
+                                        </h5>
+                                        <div class="rate">
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                        </div>
+                                        <p style="margin: 0; padding: 0;">
+                                            Công thức hay 3
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Item comment -->
+                                <div class="item">
+                                    <div style="
+                                        background: #fff; 
+                                        border: none;
+                                        border-bottom:  1px solid #3333;;
+                                        width: max-content;
+                                        margin-left: 10px;
+                                        margin-top: 10px;
+                                        margin-bottom: 20px;
+                                        padding:  5px 15px;
+                                        width: 90%;">
+                                        <h5 style="margin: 0; padding: 0; font-weight: bold;">
+                                            Nguyen Van A
+                                        </h5>
+                                        <div class="rate">
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                        </div>
+                                        <p style="margin: 0; padding: 0;">
+                                            Công thức hay 4
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Item comment -->
+                                <div class="item">
+                                    <div style="
+                                        background: #fff; 
+                                        border: none;
+                                        border-bottom:  1px solid #3333;;
+                                        width: max-content;
+                                        margin-left: 10px;
+                                        margin-top: 10px;
+                                        margin-bottom: 20px;
+                                        padding:  5px 15px;
+                                        width: 90%;">
+                                        <h5 style="margin: 0; padding: 0; font-weight: bold;">
+                                            Nguyen Van A
+                                        </h5>
+                                        <div class="rate">
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                            <i class="fa fa-star fa-fw" style="color: #efe707;"></i>
+                                        </div>
+                                        <p style="margin: 0; padding: 0;">
+                                            Công thức hay 5
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- load more -->
+                            <div class="loadMore" style="text-align: right; margin-right: 40px; cursor: pointer;">
+                                <div>Load More</div>
+                            </div>
+                            <div class="loadHide" style="text-align: right; margin-right: 40px; cursor: pointer;">
+                                <div>Hide</div>
+                            </div>
+
+
+
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Container -->
-        <!-- Back to top -->
-        <a class="back-to-top modeltheme-is-visible modeltheme-fade-out" href="#0">
-            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-        </a>
+
         <!-- Back to top -->
         <!-- Footer -->
         <footer>
@@ -1079,106 +903,6 @@
             </div>
         </footer>
         <!-- Footer -->
-        <!-- Modal cong thức -->
-        <div class="overlay" style="display: none;"></div>
-        <div class="modal-congthuc" style="display: none;">
-            <div class="modal-body" style="padding: 0 0 10px 0;">
-                <div class="cls"
-                    style="cursor: pointer; position: absolute;right: 30px;  background: #3333;  padding: 10px 15px;border-radius: 100px;">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-                <div class="detail-in ">
-                    <div class="containers">
-                        <h2 style="font-weight: bold;">Công thức</h2>
-                        <div class="list-menu" style="width: 900px; max-width: 900px; margin: 0 auto;">
-                            <form class="congthuc">
-                                <div class="form-group tencongthuc" style="text-align: left;">
-                                    <label><b>Tên công thức</b></label> <br>
-                                    <input class="form-control" type="text" name="cook_name">
-                                </div>
-                                <div class="form-group hinhanh" style="text-align: left;">
-                                    <label><b>Hình ảnh</b></label> <br>
-                                    <img class="profile-pic" src="" />
-                                    <input class="file-upload" type="file" accept="image/*" />
-                                </div>
-                                <div class="form-group nguyenlieu" style="text-align: left;">
-                                    <table>
-                                        <tr>
-                                            <th>
-                                                Nguyên liệu</th>
-                                            <th>
-                                                Khối lượng</th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="form-group">
-                                                    <select class="form-control" name="ingridient[]">
-                                                        <option value="">---Chọn nguyên liệu---</option>
-                                                        <option value="tea">Trà</option>
-                                                        <option value="milk">Sữa</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <select class="form-control" name="ingridient[]">
-                                                        <option value="">---Chọn nguyên liệu---</option>
-                                                        <option value="tea">Trà</option>
-                                                        <option value="milk">Sữa</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <select class="form-control" name="ingridient[]">
-                                                        <option value="">---Chọn nguyên liệu---</option>
-                                                        <option value="tea">Trà</option>
-                                                        <option value="milk">Sữa</option>
-                                                    </select>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="form-group">
-                                                    <select class="form-control" name="amount[]">
-                                                        <option value="0">---Chọn Khối lượng---</option>
-                                                        <option value="1">1 kí</option>
-                                                        <option value="2">2 kí</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <select class="form-control" name="amount[]">
-                                                        <option value="0">---Chọn Khối lượng---</option>
-                                                        <option value="1">1 kí</option>
-                                                        <option value="2">2 kí</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <select class="form-control" name="amount[]">
-                                                        <option value="0">---Chọn Khối lượng---</option>
-                                                        <option value="1">1 kí</option>
-                                                        <option value="2">2 kí</option>
-                                                    </select>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="form-group video" style="text-align: left;">
-                                    <label><b>Video</b></label> <br>
-                                    <input style=" border: none;" class="form-control" type="file" name="cook_video">
-                                </div>
-                                <div class="form-group cacbuoc" style="text-align: left;">
-                                    <label><b>Các bước thực hiện</b></label> <br>
-                                    <textarea class="form-control" name="process" rows="4" cols="50"></textarea>
-                                </div>
-                                <div class="form-group mota" style="text-align: left;">
-                                    <label><b>Mô tả công thức</b></label> <br>
-                                    <textarea class="form-control" name="description" rows="4" cols="50"></textarea>
-                                </div>
-                                <button class="btn btn-success" type="submit" name="submit">Submit</button>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 
@@ -1189,68 +913,68 @@
     <script type='text/javascript' src='/assets/js/scripts/wpb_composer_front.js'></script>
     <script type='text/javascript' src='/assets/js/scripts/vc_waypoints.js'></script>
     <script type='text/javascript' src='/assets/js/jquery/jquery-validation.js'></script>
-    <script src="./assets/js/scripts/jquery.js"> </script>
     <script>
         jQuery(document).ready(function () {
-            // Show more text
-            jQuery(".show-more").click(function () {
-                if (jQuery(".text").hasClass("show-more-height")) {
-                    jQuery(this).text("(Show Less)");
-                } else {
-                    jQuery(this).text("(Show More)");
+            // Rate star
+            jQuery('#stars li').on('mouseover', function () {
+                var onStar = parseInt(jQuery(this).data('value'), 10);
+                jQuery(this).parent().children('li.star').each(function (e) {
+                    if (e < onStar) {
+                        jQuery(this).addClass('hover');
+                    } else {
+                        jQuery(this).removeClass('hover');
+                    }
+                });
+            }).on('mouseout', function () {
+                jQuery(this).parent().children('li.star').each(function (e) {
+                    jQuery(this).removeClass('hover');
+                });
+            });
+            jQuery('#stars li').on('click', function () {
+                var onStar = parseInt(jQuery(this).data('value'), 10);
+                var stars = jQuery(this).parent().children('li.star');
+                for (i = 0; i < stars.length; i++) {
+                    jQuery(stars[i]).removeClass('selected');
+                }
+                for (i = 0; i < onStar; i++) {
+                    jQuery(stars[i]).addClass('selected');
                 }
 
-                jQuery(".text").toggleClass("show-more-height");
             });
-
-            jQuery('.text').each(function () {
-                let textHeight = jQuery(this).height();
-                if (textHeight >= 70) {
-                    jQuery('.show-more').css('display', 'block');
-                } else {
-                    jQuery('.show-more').css('display', 'none');
-                }
+            // Hover video
+            jQuery(".image-video").hover(function () {
+                jQuery(".video").css({ 'transform': 'scale(1)' });
+                jQuery(".link-video i").css({ 'transform': 'scale(1)' });
+            }, function () {
+                jQuery(".link-video i").css({ 'transform': 'scale(0)' });
+                jQuery(".video").css({ 'transform': 'scale(0)' });
             });
-            // Show setting
-            jQuery('.fa-ellipsis').click(function () {
-                jQuery('ul.setting-sub').slideToggle();
-            });
-            // HInh anh
-            jQuery('.file-upload').change(function () {
-                var file = jQuery(this)[0].files[0];
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    jQuery('.profile-pic').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(file);
-            });
-
-
-            // Show more commnet cua trang blog
-            jQuery(".item-blog").slice(0, 3).show();
-            if (jQuery('.item-blog').length > 3) {
-                jQuery(".loadMore2").css("display", "block");
-                jQuery(".loadMore2").on('click', function (e) {
+            // Showmore comment cua list-mon an
+            jQuery(".item").slice(0, 3).show();
+            if (jQuery('.item').length > 3) {
+                jQuery(".loadMore").css("display", "block");
+                jQuery(".loadMore").on('click', function (e) {
                     jQuery(this).css("display", "none");
-                    jQuery(".item-blog:hidden").slice(0, 3).slideDown();
-                    if (jQuery(".item-blog:hidden").length == 0) {
+                    jQuery(".item:hidden").slice(0, 3).slideDown();
+                    if (jQuery(".item:hidden").length == 0) {
                         jQuery("#load").fadeOut('slow');
                     }
 
                     // Hide comment
-                    jQuery(".loadHide2").css("display", "block");
-                    jQuery(".loadHide2").on('click', function (e) {
+                    jQuery(".loadHide").css("display", "block");
+                    jQuery(".loadHide").on('click', function (e) {
                         jQuery(this).css("display", "none");
-                        jQuery(".loadMore2").css("display", "block");
-                        jQuery(".item-blog:visible").slice(3, jQuery('.item-blog').length).slideUp();
-                        if (jQuery(".item-blog:visible").length == 0) {
+                        jQuery(".loadMore").css("display", "block");
+                        jQuery(".item:visible").slice(3, jQuery('.item').length).slideUp();
+                        if (jQuery(".item:visible").length == 0) {
                             jQuery("#hide").fadeOut('slow');
                         }
 
                     });
                 });
             }
-        }) 
+
+        });
     </script>
 
 
