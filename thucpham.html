@@ -83,6 +83,39 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+<style>
+    .list-choice {
+        display: flex;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-right: 30px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        flex-wrap: wrap;
+        min-height: 70px;
+    }
+
+    .choices {
+        background: #3333;
+        padding: 10px 15px;
+        border-radius: 20px;
+        color: #333;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .choices i {
+        cursor: pointer;
+        transition: all 0.3s linear;
+        margin-left: 5px;
+
+    }
+
+    .choices i:hover {
+        opacity: 0.7;
+        transition: all 0.3s linear;
+    }
+</style>
 
 <body data-rsssl="1"
     class="archive tax-mt-listing-category2 term-burgers term-68 theme-foodhub woocommerce-js   widgets_v1   navstyle-v1           wpb-js-composer js-comp-ver-6.4.1 vc_responsive"
@@ -612,6 +645,26 @@
                         <!-- List -->
                         <div class="col-md-6 main-content">
                             <div class="row">
+                                <div class="cards">
+                                    <div class="list-choice">
+                                        <div class="choices">
+                                            Thịt bò cô bê
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                        <div class="choices">
+                                            Thịt bò cô bê
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                        <div class="choices">
+                                            Thịt bò cô bê
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="carousel-food">
                                     <div class="col-md-4 ">
                                         <div class="listings_custom listing-taxonomy-shortcode">
@@ -630,7 +683,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -654,7 +707,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -678,7 +731,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -702,7 +755,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -726,7 +779,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -774,7 +827,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -798,7 +851,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -822,7 +875,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -846,7 +899,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -870,7 +923,7 @@
                                                     <input class=" khoiluong" type="number"
                                                         placeholder="Khối lượng (gram)" name="khoiluong" min="0"
                                                         title="Gram" onmouseover="this.title='Khối lượng (gram)'">
-                                                    <div class="btn"
+                                                    <div class="btn btn-choice"
                                                         style="background: rgb(103, 141, 21); padding: 4px 10px; color: #fff; font-size: 12px; margin-top: 5px; width: 100%;">
                                                         Chọn</div>
                                                 </div>
@@ -1265,7 +1318,19 @@
 
     <script type='text/javascript' src='/assets/js/scripts/jquery.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery("body").on("click", ".choices i", function () {
+                jQuery(this).parent().remove();
+            });
 
+            jQuery('.btn-choice').click(function () {
+                var a = jQuery(this).closest(".title-n-categories").find("a").attr("title");
+                jQuery('.list-choice').append('<div class="choices">' + a + '<i class="fa-solid fa-xmark"></i></div>');
+            });
+        })
+
+    </script>
 </body>
 
 </html>

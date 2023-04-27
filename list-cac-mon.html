@@ -98,6 +98,10 @@
     .list-mon {
         border-radius: 10px;
         margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
     }
 
     .list-mon:hover {
@@ -627,23 +631,48 @@
                     <div class="col-md-3">
                         <h3>Danh sách các món</h3>
                         <div>
-                            <ul>
-                                <li class="form-control list-mon">
+                            <div>
+                                <div class="list-mon">
                                     <p>List 1</p>
-                                </li>
-                                <li class="form-control list-mon">
-                                    <p>List 2</p>
-                                </li>
-                                <li class="form-control list-mon">
-                                    <p>List 3</p>
-                                </li>
-                                <li class="form-control list-mon">
-                                    <p>List 4</p>
-                                </li>
-                                <li class="form-control list-mon">
-                                    <p>List 5</p>
-                                </li>
-                            </ul>
+                                    <div style="width: 100px;">
+                                        <img style="border-radius: 10px;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="list-mon">
+                                    <p>List 1</p>
+                                    <div style="width: 100px;">
+                                        <img style="border-radius: 10px;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="list-mon">
+                                    <p>List 1</p>
+                                    <div style="width: 100px;">
+                                        <img style="border-radius: 10px;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="list-mon">
+                                    <p>List 1</p>
+                                    <div style="width: 100px;">
+                                        <img style="border-radius: 10px;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="list-mon">
+                                    <p>List 1</p>
+                                    <div style="width: 100px;">
+                                        <img style="border-radius: 10px;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -683,7 +712,10 @@
                                     src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
                                     alt="">
                                 <!-- Link video -->
-                                <a class="link-video" href="https://www.youtube.com/watch?v=-Zefarj0fXE">
+                                <iframe style="display: none;" class="link-video" width="100%" height="100%"
+                                    src="//www.youtube.com/embed/58-atNakMWw" frameborder="0" allowfullscreen>
+                                </iframe>
+                                <a class="link-video">
                                     <i class="fa-brands fa-youtube"></i>
                                 </a>
                             </div>
@@ -949,30 +981,42 @@
                 jQuery(".link-video i").css({ 'transform': 'scale(0)' });
                 jQuery(".video").css({ 'transform': 'scale(0)' });
             });
-            // Showmore comment cua list-mon an
-            jQuery(".item").slice(0, 3).show();
-            if (jQuery('.item').length > 3) {
-                jQuery(".loadMore").css("display", "block");
-                jQuery(".loadMore").on('click', function (e) {
-                    jQuery(this).css("display", "none");
-                    jQuery(".item:hidden").slice(0, 3).slideDown();
-                    if (jQuery(".item:hidden").length == 0) {
-                        jQuery("#load").fadeOut('slow');
-                    }
+            jQuery(".link-video").closest(".image-video").find(".link-video").on("click", function () {
+                jQuery(this).closest(".image-video").find("iframe").css("display", "block");
+                jQuery(".image-video").hover(function () {
+                    jQuery(".link-video i").css({ 'transform': 'scale(0)' });
+                    jQuery(".video").css({ 'transform': 'scale(0)' });
+                });
+            });
 
-                    // Hide comment
-                    jQuery(".loadHide").css("display", "block");
-                    jQuery(".loadHide").on('click', function (e) {
+
+
+            // Showmore comment cua list-mon an
+            jQuery(".box-content").each(function () {
+                jQuery(this).find(".item").slice(0, 3).show();
+                var count = jQuery(this).find(".item").length;
+                if (count > 3) {
+                    jQuery(".loadMore").css("display", "block");
+                    jQuery(".loadMore").closest(".textbox-cmt").find(".loadMore").on('click', function (e) {
                         jQuery(this).css("display", "none");
-                        jQuery(".loadMore").css("display", "block");
-                        jQuery(".item:visible").slice(3, jQuery('.item').length).slideUp();
-                        if (jQuery(".item:visible").length == 0) {
-                            jQuery("#hide").fadeOut('slow');
+                        jQuery(this).closest('.textbox-cmt').find('.item:hidden').slice(0, 3).slideDown();
+                        if (jQuery(this).closest('.row').find('.item:hidden').length == 0) {
+                            jQuery("#load").fadeOut('slow');
                         }
 
+                        // Hide comment
+                        jQuery(this).closest('.textbox-cmt').find('.loadHide').css("display", "block");
+                        jQuery(this).closest('.textbox-cmt').find('.loadHide').on('click', function (e) {
+                            jQuery(this).css("display", "none");
+                            jQuery(this).closest('.textbox-cmt').find('.loadMore').css("display", "block");
+                            jQuery(this).closest('.textbox-cmt').find('.item:visible').slice(3, jQuery('.item').length).slideUp();
+                            if (jQuery(this).closest('.textbox-cmt').find('.item:visible').length == 0) {
+                                jQuery("#hide").fadeOut('slow');
+                            }
+                        });
                     });
-                });
-            }
+                }
+            });
 
         });
     </script>

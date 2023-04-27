@@ -71,24 +71,39 @@ jQuery(document).ready(function () {
 
     items.slice(perPage).hide();
 
-    jQuery("#pagination-container").pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        cssStyle: "light-theme",
+    // jQuery("#pagination-container").pagination({
+    //     items: numItems,
+    //     itemsOnPage: perPage,
+    //     cssStyle: "light-theme",
 
-        onPageClick: function (pageNumber) {
-            var showFrom = perPage * (pageNumber - 1);
-            var showTo = showFrom + perPage;
+    //     onPageClick: function (pageNumber) {
+    //         var showFrom = perPage * (pageNumber - 1);
+    //         var showTo = showFrom + perPage;
 
-            items.hide()
-                .slice(showFrom, showTo).show();
-        }
-    });
+    //         items.hide()
+    //             .slice(showFrom, showTo).show();
+    //     }
+    // });
 
     jQuery(".avatar").click(function () {
         jQuery(".profile").toggle();
         jQuery(".profile").css('animation', 'show 0.5s ease-in-out forwards')
     });
     // Show more content
+
+
+    jQuery(window).on("scroll", function () {
+        if (jQuery(window).scrollTop() > 50) {
+            jQuery(".navbar").addClass("active-header");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+            jQuery(".navbar").removeClass("active-header");
+        }
+    });
+
+    jQuery('.avatar').click(function () {
+        jQuery('.drop-down-menu').slideToggle();
+    });
+
 
 });
