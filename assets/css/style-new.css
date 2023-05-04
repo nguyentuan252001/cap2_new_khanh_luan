@@ -489,6 +489,7 @@ footer ul li a {
     height: 35px !important;
     outline: none;
     border: none;
+    width: 100%;
 }
 
 .chatbot-button {

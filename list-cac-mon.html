@@ -78,6 +78,7 @@
     <script type='text/javascript' src='assets/js/jquery/jquery-migrate-js.js'></script>
     <script type="text/javascript" src="assets/js/scripts/script.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-new.css">
 
 </head>
 <style>
@@ -91,52 +92,28 @@
     }
 
     .nguyenlieu {
-        margin-left: 20px;
         margin-bottom: 20px;
     }
 
     .list-mon {
         border-radius: 10px;
         margin-bottom: 5px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 10px;
+        transition: 0.2s all linear;
     }
 
     .list-mon:hover {
         cursor: pointer;
         background-color: #3333;
+        transition: 0.2s all linear;
     }
 
     .video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #000;
-        opacity: 0.3;
-        transform: scale(0);
-        transition: all 0.3s linear;
+        margin-top: 20px;
     }
 
-    .link-video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 999;
-    }
-
-
-
-    .link-video i {
-        font-size: 76px;
-        color: #c60c0c;
-        transform: scale(0);
-        transition: all 0.3s linear;
-
+    .video iframe {
+        border-radius: 10px;
     }
 
     .rating-stars ul {
@@ -185,438 +162,82 @@
     <div class="modeltheme-overlay"></div>
     <div id="page" class="site">
         <!-- Header -->
-        <header class="header1">
-            <div class="top-header">
-                <ul class="top-header-menu">
-                    <li class="search-header">
-                        <a href="#" class="mt-search-icon">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li class="nav-menu-login nav-menu-account foodhub-logoin"><a href="#" data-modal="modal-log-in"
-                            class="modeltheme-trigger"><i class="fa fa-user-plus"></i></a></li>
-                    <li class="shop_cart_li">
-                        <a class="shop_cart" href="https://foodhub.modeltheme.com/cart/">
-                            <i class="fa fa-shopping-basket" aria-hidden="true"></i><span
-                                class="cart-contents-count">0</span>
-                        </a>
-                        <div class="header_mini_cart">
-                            <div class="widget woocommerce widget_shopping_cart">
-                                <h2 class="widgettitle">Cart</h2>
-                                <div class="widget_shopping_cart_content"></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class=" nav-menu-list nav-menu-account"><a href="https://foodhub.modeltheme.com/recipe">Submit
-                            Recipe</a></li>
-                </ul>
-            </div>
-            <nav class="navbar navbar-default logo-infos" id="modeltheme-main-head">
+        <header class="header-new">
+            <nav class="navbar">
                 <div class="col-md-12">
                     <div class="row">
-
                         <div class="navbar-header col-md-3">
-
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                <span class="sr-only"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <h1 class="logo">
-                                <a href="https://foodhub.modeltheme.com">
-                                    logo
-                                </a>
-                            </h1>
+                            <a class="logo">
+                                <div style="height: 80px; transform: scaleX(.4);">
+                                    <img src="https://scontent.fdad3-5.fna.fbcdn.net/v/t1.15752-9/337293348_247717284346089_4127857930744177751_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=4YHkFgvmLfYAX8a1Fst&_nc_ht=scontent.fdad3-5.fna&oh=03_AdTiSDCKzgJLZAGfnRZsHwRA5XBR8oc7mHR_shwEb9J6Bg&oe=646C6973"
+                                        alt="Foodhub" />
+                                </div>
+                            </a>
                         </div>
 
-                        <div id="navbar" class="navbar-collapse collapse col-md-9">
-                            <ul class="menu nav navbar-nav pull-right nav-effect nav-menu">
-                                <li id="menu-item-20320"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17869 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-20320 ">
-                                    <a href="https://foodhub.modeltheme.com/" aria-current="page">Trang Chủ</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-20483"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-17869 current_page_item menu-item-20483 ">
-                                            <a href="https://foodhub.modeltheme.com/" aria-current="page">Main Demo</a>
-                                        </li>
-                                        <li id="menu-item-20439"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20439 ">
-                                            <a href="https://foodhub.modeltheme.com/vegan-home/">Vegan Home</a>
-                                        </li>
-                                        <li id="menu-item-20909"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20909 ">
-                                            <a href="https://foodhub.modeltheme.com/slider-home/">Slider Home</a>
-                                        </li>
-                                    </ul>
+                        <div id="navbar" class=" col-md-9">
+                            <ul class="menu ">
+                                <li class="menu-item ">
+                                    <a href="#" aria-current="page">Trang Chủ</a>
+                                    <div class="cf-mega-menu sub-menu">
+                                        <ul>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                        </ul>
+                                    </div>
                                 </li>
-                                <li id="menu-item-18712"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18712 mega3columns mt--mm mega_menu">
+                                <li class="menu-item ">
                                     <a href="#">Thực Phẩm</a>
                                     <div class="cf-mega-menu sub-menu">
-                                        <div class="vc_row wpb_row vc_row-fluid no-margin vc_custom_1465558944950">
-                                            <div class="wpb_column vc_column_container vc_col-sm-3">
-                                                <div class="vc_column-inner">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="wpb_text_column wpb_content_element ">
-                                                            <div class="wpb_wrapper">
-                                                                <p><span
-                                                                        style="color: #151515; padding-top: 15px; padding-left: 10px; display: block;"><strong>Recipe
-                                                                            Pages</strong></span></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="vc_empty_space" style="height: 10px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/recipe/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-plus-circle"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Add recipe</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/recipe/classic-vanilla-toffee-cake-with-milk-and-biological-flour-2/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-pencil"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Single Recipe</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/author/oscar_admin/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-user"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Chef&#039;s Profile</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/recipes-a-z/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-th-list"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Recipes A-Z</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="vc_empty_space" style="height: 15px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wpb_column vc_column_container vc_col-sm-3">
-                                                <div class="vc_column-inner">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="wpb_text_column wpb_content_element ">
-                                                            <div class="wpb_wrapper">
-                                                                <p><span
-                                                                        style="color: #151515; padding-top: 15px; padding-left: 10px; display: block;"><strong>Recipe
-                                                                            Categories</strong></span></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="vc_empty_space" style="height: 10px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/categories/sweets/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-cutlery"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Sweets</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/categories/burgers/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-smile-o"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Burgers</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/categories/drinks/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-bolt"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Drinks</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/categories/pizzas/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-coffee"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Pizzas</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="vc_empty_space" style="height: 15px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wpb_column vc_column_container vc_col-sm-3">
-                                                <div class="vc_column-inner">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="wpb_text_column wpb_content_element ">
-                                                            <div class="wpb_wrapper">
-                                                                <p><span
-                                                                        style="color: #151515; padding-top: 15px; padding-left: 10px; display: block;"><strong>Cuisine
-                                                                            Categories</strong></span></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="vc_empty_space" style="height: 10px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/cuisines/asian/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-child"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Asian</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/cuisines/italian/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-flag-o"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Italian</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/cuisines/spanish/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-soccer-ball-o"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Spanish</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/cuisines/american/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-cab"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">American</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="vc_empty_space" style="height: 15px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wpb_column vc_column_container vc_col-sm-3">
-                                                <div class="vc_column-inner">
-                                                    <div class="wpb_wrapper">
-                                                        <div class="wpb_text_column wpb_content_element ">
-                                                            <div class="wpb_wrapper">
-                                                                <p><span
-                                                                        style="color: #151515; padding-top: 15px; padding-left: 10px; display: block;"><strong>Cooking
-                                                                            Methods</strong></span></p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="vc_empty_space" style="height: 10px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/cooking-methods/braising/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-desktop"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Braising</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/cooking-methods/baking/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-home"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Baking</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/cooking-methods/grilling/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-map-marker"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Grilling</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="mt-icon-list-item"><a
-                                                                href="https://foodhub.modeltheme.com/cooking-methods/searing/">
-                                                                <div class="mt-icon-list-icon-holder">
-                                                                    <div
-                                                                        class="mt-icon-list-icon-holder-inner clearfix">
-                                                                        <i style="margin-right:5px; color:#606060;font-size:14px"
-                                                                            class="fa fa-recycle"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <p class="mt-icon-list-text"
-                                                                    style="font-size: 14px; color: #606060"><span
-                                                                        class="name">Searing</span><span
-                                                                        class="value "></span></p>
-                                                            </a></div>
-                                                        <div class="vc_empty_space" style="height: 15px"><span
-                                                                class="vc_empty_space_inner"></span></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <ul>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                        </ul>
                                     </div>
                                 </li>
-                                <li id="menu-item-18713"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-18713 ">
+                                <li class="menu-item ">
                                     <a href="#">Sức Khỏe</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-18923"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18923 ">
-                                            <a href="https://foodhub.modeltheme.com/about-us/">About us</a>
-                                        </li>
-                                        <li id="menu-item-19007"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19007 ">
-                                            <a href="https://foodhub.modeltheme.com/contact/">Contact</a>
-                                        </li>
-                                        <li id="menu-item-20192"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20192 ">
-                                            <a href="https://foodhub.modeltheme.com/how-it-works/">How it works</a>
-                                        </li>
-                                        <li id="menu-item-19025"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19025 ">
-                                            <a href="https://foodhub.modeltheme.com/404/">404 Error Page</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-19006"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-19006 ">
-                                    <a href="https://foodhub.modeltheme.com/news/">Chế độ dinh dưỡng</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-20319"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20319 ">
-                                            <a href="https://foodhub.modeltheme.com/news/">News Masonry</a>
-                                        </li>
-                                        <li id="menu-item-20948"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20948 ">
-                                            <a href="https://foodhub.modeltheme.com/posts-and-categories/">Posts and
-                                                Categories</a>
-                                        </li>
-                                        <li id="menu-item-19041"
-                                            class="menu-item menu-item-type-post_type menu-item-object-post menu-item-19041 ">
-                                            <a href="https://foodhub.modeltheme.com/your-favorite-recipe-of-pizza/">Single
-                                                Post</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-
-                                <li id="search-header">
-                                    <a href="#" class="mt-search-icon">
-                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li id="nav-menu-login" class="nav-menu-account foodhub-logoin"><a href="#"
-                                        data-modal="modal-log-in" class="modeltheme-trigger"><i
-                                            class="fa fa-user-plus"></i></a></li>
-                                <li class="shop_cart_li">
-                                    <a class="shop_cart" href="https://foodhub.modeltheme.com/cart/">
-                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i><span
-                                            class="cart-contents-count">0</span>
-                                    </a>
-                                    <div class="header_mini_cart">
-                                        <div class="widget woocommerce widget_shopping_cart">
-                                            <h2 class="widgettitle">Cart</h2>
-                                            <div class="widget_shopping_cart_content"></div>
-                                        </div>
+                                    <div class="cf-mega-menu sub-menu">
+                                        <ul>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                        </ul>
                                     </div>
                                 </li>
-                                <li id="nav-menu-list" class="nav-menu-account"><a
-                                        href="https://foodhub.modeltheme.com/recipe">Submit Recipe</a></li>
+                                <li class="menu-item ">
+                                    <a href="https://foodhub.modeltheme.com/news/">Chế độ dinh dưỡng</a>
+                                    <div class="cf-mega-menu sub-menu">
+                                        <ul>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <li class="nav-login"><a href="#">Đăng nhập</a></li>
+                                <li class="avatar">
+                                    <div class="img">
+                                        <img src="https://plus.unsplash.com/premium_photo-1677234147673-fad786a3e2f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                            alt="">
+                                    </div>
+                                    <div class="drop-down-menu" style="display: none;">
+                                        <div><i class="fa-sharp fa-solid fa-gear"></i>Setting</div>
+                                        <div><i class="fa-solid fa-right-from-bracket"></i>Logout</div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -625,102 +246,204 @@
         </header>
         <!-- Header -->
         <!-- Container -->
-        <div id="primary" style="padding-top: 100px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <h3>Danh sách các món</h3>
-                        <div>
-                            <div>
-                                <div class="list-mon">
-                                    <p>List 1</p>
-                                    <div style="width: 100px;">
-                                        <img style="border-radius: 10px;"
-                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="list-mon">
-                                    <p>List 1</p>
-                                    <div style="width: 100px;">
-                                        <img style="border-radius: 10px;"
-                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="list-mon">
-                                    <p>List 1</p>
-                                    <div style="width: 100px;">
-                                        <img style="border-radius: 10px;"
-                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="list-mon">
-                                    <p>List 1</p>
-                                    <div style="width: 100px;">
-                                        <img style="border-radius: 10px;"
-                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                            alt="">
-                                    </div>
-                                </div>
-                                <div class="list-mon">
-                                    <p>List 1</p>
-                                    <div style="width: 100px;">
-                                        <img style="border-radius: 10px;"
-                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-                                            alt="">
-                                    </div>
-                                </div>
+        <div id="primary">
+            <div class="header-title-breadcrumb relative">
+                <div class="header-title-breadcrumb-overlay text-center"
+                    style="background-image: url('/assets/images/bg_breadcrumbs.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                <h1>Danh sách các món ăn </h1>
+                                <ol class="breadcrumb text-center">
+                                    <li><a href="/index.html" style="font-size: 14px;">Trang chủ |</a></li>
+                                    <li class="active" style="font-size: 14px;">Đồ ăn chay</li>
+                                </ol>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9">
+                </div>
+            </div>
+            <div class="container">
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-4">
+                        <h3 style="font-weight: bold;">Danh sách các món</h3>
+                        <div>
+                            <div>
+                                <!-- item -->
+                                <div class="list-mon">
+                                    <p
+                                        style="font-size: 14px;line-height: 1.5;text-align: justify; margin-bottom: 5px;">
+                                        CHÁO ĐẬU CÀ – THỨC
+                                        QUÀ TỪ KÝ ỨC /Đỉnh cao quà chiều “CNN” mà bao người mê mẩn/</p>
+                                    <div style="width: 100%;">
+                                        <img style="border-radius: 10px; max-height: 520px; width: 100%;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <!-- item -->
+                                <!-- item -->
+                                <div class="list-mon">
+                                    <p
+                                        style="font-size: 14px;line-height: 1.5;text-align: justify; margin-bottom: 5px;">
+                                        CHÁO ĐẬU CÀ – THỨC
+                                        QUÀ TỪ KÝ ỨC /Đỉnh cao quà chiều “CNN” mà bao người mê mẩn/</p>
+                                    <div style="width: 100%;">
+                                        <img style="border-radius: 10px; max-height: 520px; width: 100%;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <!-- item -->
+                                <!-- item -->
+                                <div class="list-mon">
+                                    <p
+                                        style="font-size: 14px;line-height: 1.5;text-align: justify; margin-bottom: 5px;">
+                                        CHÁO ĐẬU CÀ – THỨC
+                                        QUÀ TỪ KÝ ỨC /Đỉnh cao quà chiều “CNN” mà bao người mê mẩn/</p>
+                                    <div style="width: 100%;">
+                                        <img style="border-radius: 10px; max-height: 520px; width: 100%;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <!-- item -->
+                                <!-- item -->
+                                <div class="list-mon">
+                                    <p
+                                        style="font-size: 14px;line-height: 1.5;text-align: justify; margin-bottom: 5px;">
+                                        CHÁO ĐẬU CÀ – THỨC
+                                        QUÀ TỪ KÝ ỨC /Đỉnh cao quà chiều “CNN” mà bao người mê mẩn/</p>
+                                    <div style="width: 100%;">
+                                        <img style="border-radius: 10px; max-height: 520px; width: 100%;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <!-- item -->
+                                <!-- item -->
+                                <div class="list-mon">
+                                    <p
+                                        style="font-size: 14px;line-height: 1.5;text-align: justify; margin-bottom: 5px;">
+                                        CHÁO ĐẬU CÀ – THỨC
+                                        QUÀ TỪ KÝ ỨC /Đỉnh cao quà chiều “CNN” mà bao người mê mẩn/</p>
+                                    <div style="width: 100%;">
+                                        <img style="border-radius: 10px; max-height: 520px; width: 100%;"
+                                            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <!-- item -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
                         <!-- Nguyên liệu -->
                         <div>
-                            <h3>Công thức củ cải ngâm nước mắm ớt</h3>
-                            <div class="nguyenlieu">
-                                <h5>Nguyên liệu làm củ cải</h5>
+                            <h3 style="text-align: center;font-weight: bold;">CHÁO ĐẬU CÀ – THỨC QUÀ TỪ KÝ ỨC /Đỉnh cao
+                                quà chiều “CNN” mà bao người mê mẩn/</h3>
+                            <div class="nguyenlieu" style="margin-top: 20px;">
+                                <h4>Nguyên liệu làm củ cải</h4>
                                 <div>
-                                    <div style="display: flex; align-items: center ;">
-                                        <p style="width: 100px; min-width: 100px;">Củ cải trắng </p>
-                                        <p>300gr</p>
-                                    </div>
-                                    <div style="display: flex; align-items: center ;">
-                                        <p style="width: 100px; min-width: 100px;">Ớt tươi</p>
-                                        <p>6 quả</p>
-                                    </div>
-                                    <div style="display: flex; align-items: center ;">
-                                        <p style="width: 100px; min-width: 100px;">Tỏi</p>
-                                        <p>1 củ</p>
-                                    </div>
-                                    <div style="display: flex; align-items: center ;">
-                                        <p style="width: 100px; min-width: 100px;">Nước mém </p>
-                                        <p>2 muỗng canh</p>
-                                    </div>
-                                    <div style="display: flex; align-items: center ;">
-                                        <p style="width: 100px; min-width: 100px;">Muối đường</p>
-                                        <p>1 ít</p>
+                                    <div style="margin-top: 10px;">
+                                        <p style="text-transform:uppercase; font-size: 16px;">Củ cải trắng </p>
+                                        <ul style="margin: 0; padding: 0;">
+                                            <li style="font-size: 14px; line-height: 2; color: #313131;"> - 100g đỗ xanh
+                                                nguyên vỏ hạt vỡ</li>
+                                            <li style="font-size: 14px; line-height: 2; color: #313131;"> - 100g gạo tẻ
+                                            </li>
+                                            <li style="font-size: 14px; line-height: 2; color: #313131;"> - 500ml nước
+                                                ấm</li>
+                                            <li style="font-size: 14px; line-height: 2; color: #313131;"> - ¼ tsp muối
+                                            </li>
+                                            <li style="font-size: 14px; line-height: 2; color: #313131;"> - 3-4 lá nếp
+                                            </li>
+                                            <li style="font-size: 14px; line-height: 2; color: #313131;"> - 1.2 lít nước
+                                                lọc</li>
+                                            <li style="font-size: 14px; line-height: 2; color: #313131;"> - 2 Tbsp dầu
+                                                thực vật dinh dưỡng (dầu lạc/ dầu macca/ dầu óc chó)</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- hinh anh  - video -->
-                        <div class="image-video" style="position: relative;">
-                            <div class="image " style="width: 900px; height: 600px;">
-                                <img class="img-fuild" style="width: 100%;height: 100%; border-radius: 10px;"
-                                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                        <!-- Cac buoc lam -->
+                        <h4>Các bước làm:</h4>
+                        <div>
+                            <!-- Step -->
+                            <div class="images" style="margin-top: 20px;">
+                                <img style="border-radius: 10px; max-height: 520px; width: 100%;"
+                                    src="https://i2.wp.com/www.esheepkitchen.com/wp-content/uploads/2023/03/5.jpeg?resize=1536%2C980&ssl=1"
                                     alt="">
-                                <!-- Link video -->
-                                <iframe style="display: none;" class="link-video" width="100%" height="100%"
-                                    src="//www.youtube.com/embed/58-atNakMWw" frameborder="0" allowfullscreen>
-                                </iframe>
-                                <a class="link-video">
-                                    <i class="fa-brands fa-youtube"></i>
-                                </a>
+                                <div class="des">
+                                    <p style="margin-top: 25px;">
+                                        Đầu tiên, ngâm trước đỗ xanh với nửa lít nước ấm trong 45-60 phút cho mềm nhé!
+                                    </p>
+                                </div>
                             </div>
-                            <div class="video"></div>
+                            <!-- Step -->
+                            <!-- Step -->
+                            <div class="images" style="margin-top: 20px;">
+                                <img style="border-radius: 10px; max-height: 520px; width: 100%;"
+                                    src="https://i0.wp.com/www.esheepkitchen.com/wp-content/uploads/2023/03/6.jpeg?w=1365&ssl=1"
+                                    alt="">
+                                <div class="des">
+                                    <p style="margin-top: 25px;">
+                                    <p> Chuyển qua anh bạn cà bát này nào!</p>
+                                    <p>Cà bát to, rất mặn và chua gắt nên mình sẽ thái thành các lát mỏng thế này cho
+                                        vừa ăn và dễ thấm vị.</p>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Step -->
+                            <!-- Step -->
+                            <div class="images" style="margin-top: 20px;">
+                                <img style="border-radius: 10px; max-height: 520px; width: 100%;"
+                                    src="https://i0.wp.com/www.esheepkitchen.com/wp-content/uploads/2023/03/7.jpeg?resize=1536%2C1024&ssl=1"
+                                    alt="">
+                                <div class="des">
+                                    <p style="margin-top: 25px;">
+                                    <p>Bạn có tin được không, chúng ta có thể khử mặn cà nén hoặc thực phẩm “muối” mặn
+                                        như cá khô các kiểu bằng cách ngâm với… NƯỚC MUỐI đấy!</p>
+                                    <p>Đố bạn biết tại sao, đoán đúng bà Anh ship ngay một bát cháo full-toping luôn</p>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Step -->
+                            <!-- Step -->
+                            <div class="images" style="margin-top: 20px;">
+                                <img style="border-radius: 10px; max-height: 520px; width: 100%;"
+                                    src="https://i1.wp.com/www.esheepkitchen.com/wp-content/uploads/2023/03/8.jpeg?resize=1536%2C1024&ssl=1"
+                                    alt="">
+                                <div class="des">
+                                    <p style="margin-top: 25px;">
+                                    <p>Ngâm cà với nước muối loãng từ 10-15 phút, bóp thật mạnh cho trôi hết hạt rồi rửa
+                                        lại vài nước là xong, cà trắng sạch lại hết mặn.</p>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Step -->
                         </div>
+                        <!-- Video -->
+                        <div class="video">
+                            <iframe width="100%" height="520" src="https://www.youtube.com/embed/8FVT16CwqE8"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                        <!-- Ưu ddiemr nhuoc diem -->
+                        <div style="margin-top: 20px;">
+                            <div class="uudiem">
+                                <p>Đây là ưu điểm Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi,
+                                    ipsam.</p>
+                            </div>
+                            <div class="nhuocdiem">
+                                <p>Đây là nhược điểm Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Eligendi, ipsam.</p>
+                            </div>
+                        </div>
+                        <!-- Ưu ddiemr nhuoc diem -->
+                        <!-- Video -->
                         <!-- textbox comment -->
                         <div class="textbox-cmt" style="margin-top: 15px;">
                             <div class="row">
@@ -915,19 +638,93 @@
 
         <!-- Back to top -->
         <!-- Footer -->
-        <footer>
+        <footer style="background: #7c8b78; color: #fff;">
             <div class="footer-div-parent">
                 <div class="container footer">
                     <div class="container_inner_footer">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="copyright text-left">
-                                    Foodhub Theme by ModelTheme </p>
+                        <div class="row ">
+                            <div class="col-md-12" style="color: #fff; padding: 20px; text-align: center;">
+                                <div class="widget-social pc_aligncenter">
+                                    <a href="#" target="_blank" style="color: #fff; padding-left: 15px;">
+                                        <i class="fa-brands fa-facebook-f"
+                                            style="font-size: 24px; margin-right: 5px;"></i>
+                                    </a>
+                                    <a href="#" target="_blank" style="color: #fff; padding-left: 15px;">
+                                        <i class="fa-brands fa-instagram"
+                                            style="font-size: 24px; margin-right: 5px;"></i></a>
+                                    <a href="#" target="_blank" style="color: #fff; padding-left: 15px;">
+                                        <i class="fa-brands fa-youtube" style="font-size: 24px; margin-right: 5px;"></i>
+                                    </a>
+                                    <a href="#" style="color: #fff; padding-left: 15px;">
+                                        <i class="fa-regular fa-envelope"
+                                            style="font-size: 24px; margin-right: 5px;"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <p class="copyright text-right">
-                                    All Rights Reserved
-                                </p>
+                        </div>
+
+                        <div class="row text-center" style="padding: 10px 0;">
+                            <div class="col-md-4">
+                                <div class="caption"> Top Recipes</div>
+                                <ul>
+                                    <li><a id="footer-top-recipes-1" href="#">Healthy
+                                            Breakfast Ideas</a></li>
+                                    <li><a id="footer-top-recipes-2" href="#">Easy Dinner
+                                            Ideas</a></li>
+                                    <li><a id="footer-top-recipes-3" href="#">Healthy Lunch
+                                            Ideas</a></li>
+                                    <li><a id="footer-top-recipes-4" href="#">Best Brunch Recipes</a>
+                                    </li>
+                                    <li><a id="footer-top-recipes-5" href="#">Vegan Recipes</a></li>
+                                    <li><a id="footer-top-recipes-6" href="#">Best Salad Recipes</a>
+                                    </li>
+                                    <li><a id="footer-top-recipes-7" href="#">Best Soup Recipes</a>
+                                    </li>
+                                    <li><a id="footer-top-recipes-8" href="#">Easy Appetizer Recipes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="caption">
+                                    Cooking With Vegetables</div>
+                                <ul>
+                                    <li><a id="footer-cooking-with-veg-1" href="#">Avocado</a></li>
+                                    <li><a id="footer-cooking-with-veg-2" href="#">Beets</a></li>
+                                    <li><a id="footer-cooking-with-veg-3" href="#">Brussels
+                                            Sprouts</a></li>
+                                    <li><a id="footer-cooking-with-veg-4" href="#/">Broccoli</a></li>
+                                    <li><a id="footer-cooking-with-veg-5" href="#">Butternut
+                                            Squash</a></li>
+                                    <li><a id="footer-cooking-with-veg-6" href="#">Cauliflower</a>
+                                    </li>
+                                    <li><a id="footer-cooking-with-veg-7" href="#">Spaghetti
+                                            Squash</a></li>
+                                    <li><a id="footer-cooking-with-veg-8" href="#">Sweet Potato</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="caption">
+                                    Plant-Based Cooking Basics</div>
+                                <ul>
+                                    <li><a id="footer-plant-based-basics-1" href="#">Brown Rice</a>
+                                    </li>
+                                    <li><a id="footer-plant-based-basics-2" href="#">Lentils</a></li>
+                                    <li><a id="footer-plant-based-basics-3" href="#">Roasted
+                                            Chickpeas</a></li>
+                                    <li><a id="footer-plant-based-basics-4" href="#"></li>
+                                    <li><a id="footer-plant-based-basics-5" href="#/">Tofu</a></li>
+                                    <li><a id="footer-plant-based-basics-6" href="#"></li>
+                                    <li><a id="footer-plant-based-basics-7" href="#"></li>
+                                    <li><a id="footer-plant-based-basics-8" href="#/">Zucchini Noodles</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row" style="padding-bottom: 20px;">
+                            <div class="col-md-12 text-center" style="color: #fff;">
+                                Copyright © 2023 Capstone2, 254 Nguyen Van Linh.
                             </div>
                         </div>
                     </div>
@@ -935,6 +732,56 @@
             </div>
         </footer>
         <!-- Footer -->
+           <!-- ----------------------------------------------- -->
+        <!-- -------------------Chatbot---------------------- -->
+        <!-- ----------------------------------------------- -->
+        <div class="icon-chatbot">
+            <div class="name">Chatbot GPT</div>
+            <div class="avatarfqa__live-icon__XptWP" style="cursor: pointer; background-color: transparent;"><img
+                    src="https://livechat-ui.fqa.vn/a0da9235b7a74c50315185d91b672a00.png"
+                    style="width: 53px; height: 53px;"></div>
+        </div>
+        <div class="chatbot-container" style="opacity: 0; transform: scale(0);">
+            <div class="chat-us" style="display: flex; align-items: center;">
+                <div style="width: 48px; margin-right: 5px;">
+                    <img style="width: 100%;" src="https://livechat-ui.fqa.vn/a0da9235b7a74c50315185d91b672a00.png"
+                        alt="">
+                </div>
+                <span>Chat GPT<i class="fa-regular fa-comments"></i></span>
+                <span class="close-chat"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <div class="chatbot-message-container">
+                <div>
+                    <div style="display: flex; align-items: center; position: relative;">
+                        <div style="max-width: 35px; padding-right: 5px; position: absolute; top: 12px;">
+                            <img style="width: 100%;"
+                                src="https://livechat-ui.fqa.vn/a0da9235b7a74c50315185d91b672a00.png" alt="">
+                        </div>
+                        <div style="margin-left: 35px;">
+                            <div class="chatbot-message bot-message"
+                                style="background-color: #f0f0f0; border-radius: 10px;">Xin chào tôi có thể giúp gì cho
+                                bạn?</div>
+                            <div style="text-align: right; font-size: 12px; color: #33333390;"><span>16:45</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="float: right;">
+                    <div class="chatbot-message user-message"
+                        style="background-color: #ff884b; border-radius: 10px; color: #fff; width: fit-content;"> I
+                        help?Hi
+                        there, how can I
+                        help?</div>
+                    <div style="text-align: left; font-size: 12px; color: #33333390;"><span>16:45</span></div>
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" class="chatbot-input" placeholder="Type your message here..." />
+                <button class="chatbot-button"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <!-- ----------------------------------------------- -->
+        <!-- -------------------Chatbot---------------------- -->
+        <!-- ----------------------------------------------- -->
     </div>
 
 
@@ -972,21 +819,6 @@
                     jQuery(stars[i]).addClass('selected');
                 }
 
-            });
-            // Hover video
-            jQuery(".image-video").hover(function () {
-                jQuery(".video").css({ 'transform': 'scale(1)' });
-                jQuery(".link-video i").css({ 'transform': 'scale(1)' });
-            }, function () {
-                jQuery(".link-video i").css({ 'transform': 'scale(0)' });
-                jQuery(".video").css({ 'transform': 'scale(0)' });
-            });
-            jQuery(".link-video").closest(".image-video").find(".link-video").on("click", function () {
-                jQuery(this).closest(".image-video").find("iframe").css("display", "block");
-                jQuery(".image-video").hover(function () {
-                    jQuery(".link-video i").css({ 'transform': 'scale(0)' });
-                    jQuery(".video").css({ 'transform': 'scale(0)' });
-                });
             });
 
 
