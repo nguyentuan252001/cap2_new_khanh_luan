@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://foodhub.modeltheme.com/wp-content/themes/foodhub/images/favicon.png">
+    <title>Foodhub &#8211; Recipes WordPress Theme</title>
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/foodhub.modeltheme.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6.10" } };
+        !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode; p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0); e = i.toDataURL(); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (!p || !p.fillText) return !1; switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <link rel="stylesheet" href="/assets/css/wrap/library-css/library-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/vendors/vendors.css">
+    <link rel="stylesheet" href="/assets/css/wrap/wc-block-style-css/wc-block-style-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/lrr-for-woocommerce-css/lrr-for-woocommerce-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/style-shortcodes-inc-css/style-shortcodes-inc-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/style-mt-mega-menu-css/style-mt-mega-menu-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/style-select2-css/style-select2-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/style-animations-css/style-animations-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/mtlisitings-frontend-css/mtlisitings-frontend-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/rs-plugin-settings-css/rs-plugin-settings-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/woocommerce/woocommerce-layout-css/woocommerce-layout-css.css">
+    <link rel="stylesheet"
+        href="/assets/css/wrap/woocommerce/woocommerce-smallscreen-css/woocommerce-smallscreen-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/woocommerce/woocommerce-general-css/woocommerce-general-css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/assets/css/wrap/foodhub-responsive-css/foodhub-responsive-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/foodhub-media-screens-css/foodhub-media-screens-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/owl-carousel-css/owl-carousel-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/animate-css/animate-css.css">
+
+    <link rel="stylesheet" href="/assets/css/wrap/foodhub/foodhub-style-css/foodhub-style-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/foodhub/foodhub-mt-style-css/foodhub-mt-style-css.css">
+    <link rel="stylesheet"
+        href="/assets/css/wrap/foodhub/foodhub-styles-module-blogloops-css/foodhub-styles-module-blogloops-css.css">
+    <link rel="stylesheet"
+        href="/assets/css/wrap/foodhub/foodhub-styles-module-navigations-css/foodhub-styles-module-navigations-css.css">
+
+    <link rel="stylesheet" href="/assets/css/wrap/foodhub/foodhub-styles-headers-css/foodhub-styles-headers-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/foodhub/foodhub-styles-footer-css/foodhub-styles-footer-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/loaders-css/loaders-css.css">
+    <link rel="stylesheet"
+        href="/assets/css/wrap/foodhub/foodhub-gutenberg-frontend-css/foodhub-gutenberg-frontend-css.css">
+
+    <!--  -->
+    <link rel='stylesheet'
+        href='//fonts.googleapis.com/css?family=Cherry+Swash%3Aregular%2C700%2Clatin-ext%2Clatin%7CSignika%3A300%2Cregular%2C600%2C700%2Clatin-ext%2Clatin%7CUbuntu%3A300%2Cregular%2C500%2C700&#038;ver=1.0.0'
+        type='text/css' media='all' />
+    <!--  -->
+
+    <link rel="stylesheet" href="/assets/css/wrap/buttons-css/buttons-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/dashicons-css/dashicons-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/mediaelement-css/mediaelement-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/wp-mediaelement-css/wp-mediaelement-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/media-views-css/media-views-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/imgareaselect-css/imgareaselect-css.css">
+    <link rel="stylesheet" href="/assets/css/wrap/js_composer_front-css/js_composer_front-css.css">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css?family=Ubuntu:300%7CSignika:700&#038;display=swap&#038;ver=1662109379" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Ubuntu:300%7CSignika:700&#038;display=swap&#038;ver=1662109379"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Ubuntu:300%7CSignika:700&#038;display=swap&#038;ver=1662109379" />
+    </noscript>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.1.3/css/dx.common.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.1.3/css/dx.light.css">
+
+    <script type='text/javascript' src='assets/js/jquery/jquery-core-js.js'></script>
+    <script type='text/javascript' src='assets/js/jquery/jquery-migrate-js.js'></script>
+    <script type="text/javascript" src="assets/js/scripts/script.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-new.css">
+
+</head>
+
+<style>
+    .card-datlich {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 15px;
+        margin: 50px auto;
+        border-radius: 10px;
+        max-width: 900px;
+    }
+
+    /* .dx-overlay-wrapper.dx-scheduler-appointment-popup.dx-popup-wrapper.dx-popup-cancel-visible.dx-popup-done-visible.dx-overlay-modal.dx-overlay-shader {
+        display: none;
+    } */
+
+    .item-mon {
+        background-color: #7c8b78;
+        /* display: inline-block; */
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+
+    .item-mon:hover {
+        opacity: 0.8;
+        transition: all 0.3s linear;
+    }
+
+    .calendar {
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .prev,
+    .next {
+        padding: 5px 10px;
+        background-color: #eee;
+        border: none;
+        cursor: pointer;
+    }
+
+    .days {
+        display: flex;
+    }
+
+    .day {
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+
+    input[type=checkbox] {
+        position: relative;
+        border: 2px solid #00FF00;
+        border-radius: 2px;
+        background: none;
+        cursor: pointer;
+        line-height: 0;
+        margin: 0 .6em 0 0;
+        outline: none;
+        padding: 0 !important;
+        vertical-align: text-top;
+        height: 20px;
+        width: 20px;
+        -webkit-appearance: none;
+        opacity: .5;
+        border-radius: 50%;
+    }
+
+    input[type=checkbox]:hover {
+        opacity: 1;
+    }
+
+    input[type=checkbox]:checked {
+        background-color: #00FF00;
+        opacity: 1;
+        outline: none;
+        border: none;
+    }
+
+    input[type="checkbox"]:focus {
+        outline: none !important;
+    }
+
+    input[type=checkbox]:before {
+        content: '';
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        width: 4px;
+        height: 10px;
+        border: solid #FFF;
+        border-width: 0 2px 2px 0;
+        margin: -1px -1px 0 -1px;
+        transform: rotate(45deg) translate(-50%, -50%);
+        z-index: 2;
+    }
+</style>
+
+<body class="  header1 is_header_semitransparent">
+    <div class="modeltheme-overlay"></div>
+    <div id="page" class="site">
+        <!-- Header -->
+        <header class="header-new">
+            <nav class="navbar">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="navbar-header col-md-3">
+                            <a class="logo">
+                                <div style="height: 80px; transform: scaleX(.4);">
+                                    <img src="https://scontent.fdad3-5.fna.fbcdn.net/v/t1.15752-9/337293348_247717284346089_4127857930744177751_n.png?_nc_cat=102&ccb=1-7&_nc_sid=ae9488&_nc_ohc=4YHkFgvmLfYAX8a1Fst&_nc_ht=scontent.fdad3-5.fna&oh=03_AdTiSDCKzgJLZAGfnRZsHwRA5XBR8oc7mHR_shwEb9J6Bg&oe=646C6973"
+                                        alt="Foodhub" />
+                                </div>
+                            </a>
+                        </div>
+
+                        <div id="navbar" class=" col-md-9">
+                            <ul class="menu ">
+                                <li class="menu-item ">
+                                    <a href="#" aria-current="page">Trang Chủ</a>
+                                    <div class="cf-mega-menu sub-menu">
+                                        <ul>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item ">
+                                    <a href="#">Thực Phẩm</a>
+                                    <div class="cf-mega-menu sub-menu">
+                                        <ul>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item ">
+                                    <a href="#">Sức Khỏe</a>
+                                    <div class="cf-mega-menu sub-menu">
+                                        <ul>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="menu-item ">
+                                    <a href="https://foodhub.modeltheme.com/news/">Chế độ dinh dưỡng</a>
+                                    <div class="cf-mega-menu sub-menu">
+                                        <ul>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                            <li class="sub-menu-item">1</li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+
+                                <li class="nav-login"><a href="#">Đăng nhập</a></li>
+                                <li class="avatar">
+                                    <div class="img">
+                                        <img src="https://plus.unsplash.com/premium_photo-1677234147673-fad786a3e2f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                            alt="">
+                                    </div>
+                                    <div class="drop-down-menu" style="display: none;">
+                                        <div><i class="fa-sharp fa-solid fa-gear"></i>Setting</div>
+                                        <div><i class="fa-solid fa-right-from-bracket"></i>Logout</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Header -->
+        <!-- Container -->
+        <div id="primary">
+            <div class="header-title-breadcrumb relative">
+                <div class="header-title-breadcrumb-overlay text-center"
+                    style="background-image: url('/assets/images/bg_breadcrumbs.jpg');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                <h1>Danh sách các món ăn </h1>
+                                <ol class="breadcrumb text-center">
+                                    <li><a href="/index.html" style="font-size: 14px;">Trang chủ |</a></li>
+                                    <li class="active" style="font-size: 14px;">Đồ ăn chay</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card-datlich">
+                    <div class="card-header">
+                        <div style="font-size: 24px; margin-bottom: 10px;">
+                            Lịch cho người từ 6 - 12 tuổi
+                        </div>
+                        <div
+                            style="display: flex; align-items: center; flex-direction: row-reverse; justify-content: space-between;">
+                            <div class="form-group">
+                                <select style="border-radius: 10px; width: 250px;" name="" id="" class="form-control">
+                                    <option value="1"> 1 - 6 tuổi</option>
+                                    <option value="2"> 6 - 12 tuổi</option>
+                                </select>
+                            </div>
+                            <div>
+                                <div class="btn"
+                                    style="background: #2f80ec; color: #fff; border-radius: 10px; padding: 10px;">
+                                    Tạo lịch <i class="fa-solid fa-plus"></i>
+                                </div>
+                                <div class="btn btn-sv"
+                                    style="background: #2f80ec; color: #fff; border-radius: 10px; padding: 10px;">
+                                    Lưu
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body" style="display: flex; align-items: center; justify-content: space-between;">
+                        <div class="row">
+                            <div class="col-md-3">
+                                
+                            </div>
+                            <div class="col-md-9">
+
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Container -->
+
+        <!-- Back to top -->
+        <!-- Footer -->
+        <footer style="background: #7c8b78; color: #fff;">
+            <div class="footer-div-parent">
+                <div class="container footer">
+                    <div class="container_inner_footer">
+                        <div class="row ">
+                            <div class="col-md-12" style="color: #fff; padding: 20px; text-align: center;">
+                                <div class="widget-social pc_aligncenter">
+                                    <a href="#" target="_blank" style="color: #fff; padding-left: 15px;">
+                                        <i class="fa-brands fa-facebook-f"
+                                            style="font-size: 24px; margin-right: 5px;"></i>
+                                    </a>
+                                    <a href="#" target="_blank" style="color: #fff; padding-left: 15px;">
+                                        <i class="fa-brands fa-instagram"
+                                            style="font-size: 24px; margin-right: 5px;"></i></a>
+                                    <a href="#" target="_blank" style="color: #fff; padding-left: 15px;">
+                                        <i class="fa-brands fa-youtube" style="font-size: 24px; margin-right: 5px;"></i>
+                                    </a>
+                                    <a href="#" style="color: #fff; padding-left: 15px;">
+                                        <i class="fa-regular fa-envelope"
+                                            style="font-size: 24px; margin-right: 5px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row text-center" style="padding: 10px 0;">
+                            <div class="col-md-4">
+                                <div class="caption"> Top Recipes</div>
+                                <ul>
+                                    <li><a id="footer-top-recipes-1" href="#">Healthy
+                                            Breakfast Ideas</a></li>
+                                    <li><a id="footer-top-recipes-2" href="#">Easy Dinner
+                                            Ideas</a></li>
+                                    <li><a id="footer-top-recipes-3" href="#">Healthy Lunch
+                                            Ideas</a></li>
+                                    <li><a id="footer-top-recipes-4" href="#">Best Brunch Recipes</a>
+                                    </li>
+                                    <li><a id="footer-top-recipes-5" href="#">Vegan Recipes</a></li>
+                                    <li><a id="footer-top-recipes-6" href="#">Best Salad Recipes</a>
+                                    </li>
+                                    <li><a id="footer-top-recipes-7" href="#">Best Soup Recipes</a>
+                                    </li>
+                                    <li><a id="footer-top-recipes-8" href="#">Easy Appetizer Recipes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="caption">
+                                    Cooking With Vegetables</div>
+                                <ul>
+                                    <li><a id="footer-cooking-with-veg-1" href="#">Avocado</a></li>
+                                    <li><a id="footer-cooking-with-veg-2" href="#">Beets</a></li>
+                                    <li><a id="footer-cooking-with-veg-3" href="#">Brussels
+                                            Sprouts</a></li>
+                                    <li><a id="footer-cooking-with-veg-4" href="#/">Broccoli</a></li>
+                                    <li><a id="footer-cooking-with-veg-5" href="#">Butternut
+                                            Squash</a></li>
+                                    <li><a id="footer-cooking-with-veg-6" href="#">Cauliflower</a>
+                                    </li>
+                                    <li><a id="footer-cooking-with-veg-7" href="#">Spaghetti
+                                            Squash</a></li>
+                                    <li><a id="footer-cooking-with-veg-8" href="#">Sweet Potato</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="caption">
+                                    Plant-Based Cooking Basics</div>
+                                <ul>
+                                    <li><a id="footer-plant-based-basics-1" href="#">Brown Rice</a>
+                                    </li>
+                                    <li><a id="footer-plant-based-basics-2" href="#">Lentils</a></li>
+                                    <li><a id="footer-plant-based-basics-3" href="#">Roasted
+                                            Chickpeas</a></li>
+                                    <li><a id="footer-plant-based-basics-4" href="#"></li>
+                                    <li><a id="footer-plant-based-basics-5" href="#/">Tofu</a></li>
+                                    <li><a id="footer-plant-based-basics-6" href="#"></li>
+                                    <li><a id="footer-plant-based-basics-7" href="#"></li>
+                                    <li><a id="footer-plant-based-basics-8" href="#/">Zucchini Noodles</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row" style="padding-bottom: 20px;">
+                            <div class="col-md-12 text-center" style="color: #fff;">
+                                Copyright © 2023 Capstone2, 254 Nguyen Van Linh.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
+        <!-- ----------------------------------------------- -->
+        <!-- -------------------Chatbot---------------------- -->
+        <!-- ----------------------------------------------- -->
+        <div class="icon-chatbot">
+            <div class="name">Chatbot GPT</div>
+            <div class="avatarfqa__live-icon__XptWP" style="cursor: pointer; background-color: transparent;"><img
+                    src="https://livechat-ui.fqa.vn/a0da9235b7a74c50315185d91b672a00.png"
+                    style="width: 53px; height: 53px;"></div>
+        </div>
+        <div class="chatbot-container" style="opacity: 0; transform: scale(0);">
+            <div class="chat-us" style="display: flex; align-items: center;">
+                <div style="width: 48px; margin-right: 5px;">
+                    <img style="width: 100%;" src="https://livechat-ui.fqa.vn/a0da9235b7a74c50315185d91b672a00.png"
+                        alt="">
+                </div>
+                <span>Chat GPT<i class="fa-regular fa-comments"></i></span>
+                <span class="close-chat"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <div class="chatbot-message-container">
+                <div>
+                    <div style="display: flex; align-items: center; position: relative;">
+                        <div style="max-width: 35px; padding-right: 5px; position: absolute; top: 12px;">
+                            <img style="width: 100%;"
+                                src="https://livechat-ui.fqa.vn/a0da9235b7a74c50315185d91b672a00.png" alt="">
+                        </div>
+                        <div style="margin-left: 35px;">
+                            <div class="chatbot-message bot-message"
+                                style="background-color: #f0f0f0; border-radius: 10px;">Xin chào tôi có thể giúp gì cho
+                                bạn?</div>
+                            <div style="text-align: right; font-size: 12px; color: #33333390;"><span>16:45</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="float: right;">
+                    <div class="chatbot-message user-message"
+                        style="background-color: #ff884b; border-radius: 10px; color: #fff; width: fit-content;"> I
+                        help?Hi
+                        there, how can I
+                        help?</div>
+                    <div style="text-align: left; font-size: 12px; color: #33333390;"><span>16:45</span></div>
+                </div>
+            </div>
+            <div class="chatbot-input-container">
+                <input type="text" class="chatbot-input" placeholder="Type your message here..." />
+                <button class="chatbot-button"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <!-- ----------------------------------------------- -->
+        <!-- -------------------Chatbot---------------------- -->
+        <!-- ----------------------------------------------- -->
+    </div>
+
+
+    <script type='text/javascript' src='/assets/js/scripts/select2-js.js'></script>
+    <script type='text/javascript' src='/assets/js/scripts/slick-js.js'></script>
+    <script type='text/javascript' src='/assets/js/scripts/mtlisitings.js'></script>
+    <script type='text/javascript' src='/assets/js/scripts/owl-carousel.js'></script>
+    <script type='text/javascript' src='/assets/js/scripts/wpb_composer_front.js'></script>
+    <script type='text/javascript' src='/assets/js/scripts/vc_waypoints.js'></script>
+    <script type='text/javascript' src='/assets/js/jquery/jquery-validation.js'></script>
+    <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/21.1.3/js/dx.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            // Rate star
+            jQuery('#stars li').on('mouseover', function () {
+                var onStar = parseInt(jQuery(this).data('value'), 10);
+                jQuery(this).parent().children('li.star').each(function (e) {
+                    if (e < onStar) {
+                        jQuery(this).addClass('hover');
+                    } else {
+                        jQuery(this).removeClass('hover');
+                    }
+                });
+            }).on('mouseout', function () {
+                jQuery(this).parent().children('li.star').each(function (e) {
+                    jQuery(this).removeClass('hover');
+                });
+            });
+            jQuery('#stars li').on('click', function () {
+                var onStar = parseInt(jQuery(this).data('value'), 10);
+                var stars = jQuery(this).parent().children('li.star');
+                for (i = 0; i < stars.length; i++) {
+                    jQuery(stars[i]).removeClass('selected');
+                }
+                for (i = 0; i < onStar; i++) {
+                    jQuery(stars[i]).addClass('selected');
+                }
+
+            });
+
+
+
+            // Showmore comment cua list-mon an
+            jQuery(".box-content").each(function () {
+                jQuery(this).find(".item").slice(0, 3).show();
+                var count = jQuery(this).find(".item").length;
+                if (count > 3) {
+                    jQuery(".loadMore").css("display", "block");
+                    jQuery(".loadMore").closest(".textbox-cmt").find(".loadMore").on('click', function (e) {
+                        jQuery(this).css("display", "none");
+                        jQuery(this).closest('.textbox-cmt').find('.item:hidden').slice(0, 3).slideDown();
+                        if (jQuery(this).closest('.row').find('.item:hidden').length == 0) {
+                            jQuery("#load").fadeOut('slow');
+                        }
+
+                        // Hide comment
+                        jQuery(this).closest('.textbox-cmt').find('.loadHide').css("display", "block");
+                        jQuery(this).closest('.textbox-cmt').find('.loadHide').on('click', function (e) {
+                            jQuery(this).css("display", "none");
+                            jQuery(this).closest('.textbox-cmt').find('.loadMore').css("display", "block");
+                            jQuery(this).closest('.textbox-cmt').find('.item:visible').slice(3, jQuery('.item').length).slideUp();
+                            if (jQuery(this).closest('.textbox-cmt').find('.item:visible').length == 0) {
+                                jQuery("#hide").fadeOut('slow');
+                            }
+                        });
+                    });
+                }
+            });
+
+        });
+    </script>
+    <!-- <script>
+        jQuery(document).ready(function () {
+
+            const data = [
+                {
+                    startDate: new Date(),
+                    endDate: new Date(new Date().getTime() + (3600 * 1000)),
+                    text: "Sample appoinment"
+                }
+            ];
+
+            var scheduler = jQuery("#scheduler").dxScheduler({
+                dataSource: data,
+                views: ["day", "week"],
+                currentView: "week",
+                currentDate: new Date(),
+                startDayHour: 9,
+                endDayHour: 19,
+                height: 600
+            }).dxScheduler("instance");
+
+            var store = scheduler.getDataSource().store();
+        });
+
+    </script> -->
+    <script>
+        jQuery(document).ready(function () {
+            var startDate = moment().startOf('week').add(1, 'days');
+            jQuery('.week-start-date').text(startDate.format('MMM DD, YYYY'));
+            var checkboxState = {};
+            renderWeek(startDate);
+            // Chuyển sang tuần trước khi nhấn vào nút "Tuần trước" 
+            jQuery('.prev').click(function () {
+                saveCheckboxState();
+                startDate.subtract(1, 'weeks');
+                renderWeek(startDate);
+                jQuery('.week-start-date').text(startDate.format('MMM DD, YYYY'));
+                restoreCheckboxState();
+            });
+            // Chuyển sang tuần tiếp theo khi nhấn vào nút "Tuần sau" 
+            jQuery('.next').click(function () {
+                saveCheckboxState();
+                startDate.add(1, 'weeks');
+                renderWeek(startDate);
+                jQuery('.week-start-date').text(startDate.format('MMM DD, YYYY'));
+                restoreCheckboxState();
+            });
+
+            // Hàm xuất ra các checkbox cho một tuần đã cho 
+            function renderWeek(startDate) {
+                jQuery('.day').each(function (index) {
+                    var currentDate = moment(startDate).add(index, 'days');
+                    jQuery(this).find('h3').text(currentDate.format('ddd, MMM DD'));
+                    jQuery(this).find('input[type="checkbox"]').each(function (taskNumber) {
+                        var checkboxValue = currentDate.format('YYYY-MM-DD') + '-task-' + (taskNumber + 1);
+                        // Thiết lập trạng thái của checkbox dựa trên trạng thái đã lưu 
+                        if (checkboxState[checkboxValue]) {
+                            jQuery(this).prop('checked', true);
+                        } else {
+                            jQuery(this).prop('checked', false);
+                        }
+                        jQuery(this).val(checkboxValue);
+                    });
+                });
+            }
+            var checkboxState = {};
+            // Hàm lưu trạng thái của checkbox 
+            function saveCheckboxState() {
+                jQuery('input[type="checkbox"]').each(function () {
+                    var checkboxValue = jQuery(this).val();
+                    var checkboxChecked = jQuery(this).is(':checked');
+                    checkboxState[checkboxValue] = checkboxChecked;
+                });
+            }
+            // Hàm khôi phục lại trạng thái của checkbox 
+            function restoreCheckboxState() {
+                jQuery('input[type="checkbox"]').each(function () {
+                    var checkboxValue = jQuery(this).val();
+                    if (checkboxState[checkboxValue]) {
+                        jQuery(this).prop('checked', true);
+                    } else {
+                        jQuery(this).prop('checked', false);
+                    }
+                });
+            }
+            jQuery('#nextWeek').click(function () {
+                saveCheckboxState();
+                restoreCheckboxState();
+            });
+
+            jQuery('#backWeek').click(function () {
+                restoreCheckboxState();
+            });
+        });
+
+    </script>
+</body>
+
+</html>
